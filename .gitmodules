@@ -1,0 +1,3 @@
+[submodule "haiku/Third-Party Libraries/SWRevealViewController"]
+	path = haiku/Third-Party Libraries/SWRevealViewController
+	url = https://github.com/John-Lluch/SWRevealViewController.git
