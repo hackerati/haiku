@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED6617E53ACA00D32549 /* HKBaseViewController.m */; };
+		9C4CED6B17E53B1300D32549 /* HKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */; };
+		9C4CED7517E53C6800D32549 /* HKPoemsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED7417E53C6800D32549 /* HKPoemsListViewController.m */; };
+		9C4CED7817E53C8200D32549 /* HKFavoritePoemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED7717E53C8200D32549 /* HKFavoritePoemsViewController.m */; };
+		9C4CED7B17E53C9900D32549 /* HKAllPoemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED7A17E53C9900D32549 /* HKAllPoemsViewController.m */; };
+		9C4CED7F17E5420100D32549 /* HKPoemWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED7E17E5420100D32549 /* HKPoemWebView.m */; };
+		9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8417E54D1A00D32549 /* iphone_tmpl.html */; };
+		9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */; };
+		9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */; };
 		C7A8D25E17E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
 		C7A8D26017E1397800D235ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25F17E1397800D235ED /* CoreGraphics.framework */; };
 		C7A8D26217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
@@ -15,7 +24,6 @@
 		C7A8D26E17E1397800D235ED /* HKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D26D17E1397800D235ED /* HKAppDelegate.m */; };
 		C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */; };
 		C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D27217E1397800D235ED /* Main_iPad.storyboard */; };
-		C7A8D27717E1397800D235ED /* HKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D27617E1397800D235ED /* HKViewController.m */; };
 		C7A8D27917E1397800D235ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D27817E1397800D235ED /* Images.xcassets */; };
 		C7A8D28017E1397800D235ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D27F17E1397800D235ED /* XCTest.framework */; };
 		C7A8D28117E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
@@ -35,6 +43,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C4CED6517E53ACA00D32549 /* HKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKBaseViewController.h; path = "Classes/View Controllers/HKBaseViewController/HKBaseViewController.h"; sourceTree = "<group>"; };
+		9C4CED6617E53ACA00D32549 /* HKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKBaseViewController.m; path = "Classes/View Controllers/HKBaseViewController/HKBaseViewController.m"; sourceTree = "<group>"; };
+		9C4CED6917E53B1300D32549 /* HKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKHomeViewController.h; path = "Classes/View Controllers/HKHomeViewController/HKHomeViewController.h"; sourceTree = "<group>"; };
+		9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKHomeViewController.m; path = "Classes/View Controllers/HKHomeViewController/HKHomeViewController.m"; sourceTree = "<group>"; };
+		9C4CED7317E53C6800D32549 /* HKPoemsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKPoemsListViewController.h; path = "Classes/View Controllers/HKPoemsListViewController/HKPoemsListViewController.h"; sourceTree = "<group>"; };
+		9C4CED7417E53C6800D32549 /* HKPoemsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKPoemsListViewController.m; path = "Classes/View Controllers/HKPoemsListViewController/HKPoemsListViewController.m"; sourceTree = "<group>"; };
+		9C4CED7617E53C8200D32549 /* HKFavoritePoemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKFavoritePoemsViewController.h; path = "Classes/View Controllers/HKFavoritePoemsViewController/HKFavoritePoemsViewController.h"; sourceTree = "<group>"; };
+		9C4CED7717E53C8200D32549 /* HKFavoritePoemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKFavoritePoemsViewController.m; path = "Classes/View Controllers/HKFavoritePoemsViewController/HKFavoritePoemsViewController.m"; sourceTree = "<group>"; };
+		9C4CED7917E53C9900D32549 /* HKAllPoemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKAllPoemsViewController.h; path = "Classes/View Controllers/HKAllPoemsViewController/HKAllPoemsViewController.h"; sourceTree = "<group>"; };
+		9C4CED7A17E53C9900D32549 /* HKAllPoemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKAllPoemsViewController.m; path = "Classes/View Controllers/HKAllPoemsViewController/HKAllPoemsViewController.m"; sourceTree = "<group>"; };
+		9C4CED7D17E5420100D32549 /* HKPoemWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKPoemWebView.h; path = Classes/HKPoemWebView/HKPoemWebView.h; sourceTree = "<group>"; };
+		9C4CED7E17E5420100D32549 /* HKPoemWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKPoemWebView.m; path = Classes/HKPoemWebView/HKPoemWebView.m; sourceTree = "<group>"; };
+		9C4CED8417E54D1A00D32549 /* iphone_tmpl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = iphone_tmpl.html; path = "Resources/HTML Templates/iphone_tmpl.html"; sourceTree = "<group>"; };
+		9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = iphone_tmpl.css; path = "Resources/HTML Templates/iphone_tmpl.css"; sourceTree = "<group>"; };
+		9C4CEE9917E557B100D32549 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		C7A8D25A17E1397800D235ED /* haiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D25D17E1397800D235ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7A8D25F17E1397800D235ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -47,8 +71,6 @@
 		C7A8D26D17E1397800D235ED /* HKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKAppDelegate.m; sourceTree = "<group>"; };
 		C7A8D27017E1397800D235ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		C7A8D27317E1397800D235ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		C7A8D27517E1397800D235ED /* HKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKViewController.h; sourceTree = "<group>"; };
-		C7A8D27617E1397800D235ED /* HKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKViewController.m; sourceTree = "<group>"; };
 		C7A8D27817E1397800D235ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7A8D27E17E1397800D235ED /* haikuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = haikuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D27F17E1397800D235ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -81,6 +103,115 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C4CED6217E53A8500D32549 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED6317E53A8C00D32549 /* View Controllers */,
+				9C4CED7C17E541D000D32549 /* HKPoemWebView */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		9C4CED6317E53A8C00D32549 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED6417E53A9E00D32549 /* HKBaseViewController */,
+				9C4CED6817E53AEA00D32549 /* HKHomeViewController */,
+				9C4CED7017E53C2000D32549 /* HKPoemsListViewController */,
+				9C4CED7217E53C4600D32549 /* HKAllPoemsViewController */,
+				9C4CED7117E53C3100D32549 /* HKFavoritePoemsViewController */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9C4CED6417E53A9E00D32549 /* HKBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED6517E53ACA00D32549 /* HKBaseViewController.h */,
+				9C4CED6617E53ACA00D32549 /* HKBaseViewController.m */,
+			);
+			name = HKBaseViewController;
+			sourceTree = "<group>";
+		};
+		9C4CED6817E53AEA00D32549 /* HKHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED6917E53B1300D32549 /* HKHomeViewController.h */,
+				9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */,
+			);
+			name = HKHomeViewController;
+			sourceTree = "<group>";
+		};
+		9C4CED7017E53C2000D32549 /* HKPoemsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED7317E53C6800D32549 /* HKPoemsListViewController.h */,
+				9C4CED7417E53C6800D32549 /* HKPoemsListViewController.m */,
+			);
+			name = HKPoemsListViewController;
+			sourceTree = "<group>";
+		};
+		9C4CED7117E53C3100D32549 /* HKFavoritePoemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED7617E53C8200D32549 /* HKFavoritePoemsViewController.h */,
+				9C4CED7717E53C8200D32549 /* HKFavoritePoemsViewController.m */,
+			);
+			name = HKFavoritePoemsViewController;
+			sourceTree = "<group>";
+		};
+		9C4CED7217E53C4600D32549 /* HKAllPoemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED7917E53C9900D32549 /* HKAllPoemsViewController.h */,
+				9C4CED7A17E53C9900D32549 /* HKAllPoemsViewController.m */,
+			);
+			name = HKAllPoemsViewController;
+			sourceTree = "<group>";
+		};
+		9C4CED7C17E541D000D32549 /* HKPoemWebView */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED7D17E5420100D32549 /* HKPoemWebView.h */,
+				9C4CED7E17E5420100D32549 /* HKPoemWebView.m */,
+			);
+			name = HKPoemWebView;
+			sourceTree = "<group>";
+		};
+		9C4CED8217E54A5F00D32549 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED8317E54C0B00D32549 /* HTML Templates */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9C4CED8317E54C0B00D32549 /* HTML Templates */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */,
+				9C4CED8417E54D1A00D32549 /* iphone_tmpl.html */,
+			);
+			name = "HTML Templates";
+			sourceTree = "<group>";
+		};
+		9C4CED8817E556A400D32549 /* Third-Party Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CEE9817E5579F00D32549 /* SWRevealViewController */,
+			);
+			name = "Third-Party Libraries";
+			sourceTree = "<group>";
+		};
+		9C4CEE9817E5579F00D32549 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C4CEE9917E557B100D32549 /* SWRevealViewController.h */,
+				9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		C7A8D25117E1397800D235ED = {
 			isa = PBXGroup;
 			children = (
@@ -118,9 +249,10 @@
 				C7A8D26D17E1397800D235ED /* HKAppDelegate.m */,
 				C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */,
 				C7A8D27217E1397800D235ED /* Main_iPad.storyboard */,
-				C7A8D27517E1397800D235ED /* HKViewController.h */,
-				C7A8D27617E1397800D235ED /* HKViewController.m */,
 				C7A8D27817E1397800D235ED /* Images.xcassets */,
+				9C4CED6217E53A8500D32549 /* Classes */,
+				9C4CED8217E54A5F00D32549 /* Resources */,
+				9C4CED8817E556A400D32549 /* Third-Party Libraries */,
 				C7A8D26417E1397800D235ED /* Supporting Files */,
 			);
 			path = haiku;
@@ -233,6 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */,
+				9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */,
+				9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */,
 				C7A8D27917E1397800D235ED /* Images.xcassets in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
@@ -254,9 +388,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7A8D27717E1397800D235ED /* HKViewController.m in Sources */,
+				9C4CED7517E53C6800D32549 /* HKPoemsListViewController.m in Sources */,
+				9C4CED7817E53C8200D32549 /* HKFavoritePoemsViewController.m in Sources */,
 				C7A8D26A17E1397800D235ED /* main.m in Sources */,
+				9C4CED7B17E53C9900D32549 /* HKAllPoemsViewController.m in Sources */,
+				9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */,
+				9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */,
+				9C4CED6B17E53B1300D32549 /* HKHomeViewController.m in Sources */,
 				C7A8D26E17E1397800D235ED /* HKAppDelegate.m in Sources */,
+				9C4CED7F17E5420100D32549 /* HKPoemWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +609,7 @@
 				C7A8D29117E1397800D235ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7A8D29217E1397800D235ED /* Build configuration list for PBXNativeTarget "haikuTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +618,7 @@
 				C7A8D29417E1397800D235ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
