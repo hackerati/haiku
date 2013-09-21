@@ -56,4 +56,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction) share: (id) sender {
+    NSString* someText = @"SHMARGUM";// self.textView.text;
+    NSArray* dataToShare = @[someText];  // ...or whatever pieces of data you want to share.
+    
+    UIActivityViewController* activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:dataToShare
+                                      applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:^{}];
+}
+
 @end
