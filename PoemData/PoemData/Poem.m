@@ -14,6 +14,7 @@
 
 @dynamic content;
 @dynamic title;
+@dynamic edition;
 @dynamic category;
 
 @end

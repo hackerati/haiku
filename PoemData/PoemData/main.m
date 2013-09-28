@@ -54,56 +54,52 @@ static NSManagedObjectContext *managedObjectContext()
     return context;
 }
 
-static NSManagedObjectContext *generateManagedObjectContextFromPoemJson(NSJSONSerialization *poemData)
+int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext *context, NSString *edition)
 {
-    // Create the managed object context
-    NSManagedObjectContext *context = managedObjectContext();
-    NSJSONSerialization * feed = [poemData valueForKey:@"feed"];
-    NSArray * allPoems = [feed valueForKey:@"entry"];
+    NSJSONSerialization *feed = [poemData valueForKey:@"feed"];
+    NSArray *allPoems = [feed valueForKey:@"entry"];
     
     for (NSJSONSerialization * poem in allPoems)
     {
-        Poem * newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"Poem" inManagedObjectContext:context];
+        Poem *newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"Poem" inManagedObjectContext:context];
         
         newPoem.title = [[poem valueForKey:@"title"] valueForKey:@"$t"];
         newPoem.content = [[poem valueForKey:@"content"] valueForKey:@"$t"];
         
-        NSArray * categories = [poem valueForKey:@"category"];
+        NSArray *categories = [poem valueForKey:@"category"];
         
         for (NSJSONSerialization * category in categories)
         {
-            NSString * categoryTerm = [category valueForKey:@"term"];
-            Category * newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
+            NSString *categoryTerm = [category valueForKey:@"term"];
+            Category *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
             
             newCategory.name = categoryTerm;
             newPoem.category = newCategory;
         }
     }
-    return context;
+    return 0;
 }
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
+        NSManagedObjectContext *context = managedObjectContext();
         NSError* err = nil;
         NSArray *poemSrc = [NSArray arrayWithObjects:@"matsushita-us", @"matsushita-jp", @"matsushita-sp", nil];
         
-        NSManagedObjectContext *context = nil;
         for (NSString *editionSrc in poemSrc) {
             NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"matsushita-us" ofType:@"json"];
             NSJSONSerialization* poemData = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
                                                                                  options:kNilOptions
                                                                                    error:&err];
-            context = generateManagedObjectContextFromPoemJson(poemData);
-            
-            // Save the managed object context
-            NSError *error = nil;
-            if (![context save:&error]) {
-                NSLog(@"Error while saving %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
-                exit(1);
-            }
-            NSLog(@"Saved context for %@", editionSrc);
+            addPoemDataToContext(poemData, context, editionSrc);
+        }
+        // Save the managed object context
+        NSError *error = nil;
+        if (![context save:&error]) {
+            NSLog(@"Error while saving %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
+            exit(1);
         }
     }
     return 0;

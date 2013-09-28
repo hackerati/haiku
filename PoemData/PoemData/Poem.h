@@ -13,8 +13,9 @@
 
 @interface Poem : NSManagedObject
 
-@property (nonatomic, retain) NSString * content;
-@property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString *content;
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *edition;
 @property (nonatomic, retain) Category *category;
 
 @end
