@@ -75,6 +75,7 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
             
             newCategory.name = categoryTerm;
             newPoem.category = newCategory;
+            newPoem.edition = edition;
         }
     }
     return 0;
