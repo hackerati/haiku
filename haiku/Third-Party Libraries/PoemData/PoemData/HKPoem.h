@@ -1,5 +1,5 @@
 //
-//  Poem.h
+//  HKPoem.h
 //  PoemData
 //
 //  Created by Greg Karlin on 9/25/13.
@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Category;
+@class HKCategory;
 
-@interface Poem : NSManagedObject
+@interface HKPoem : NSManagedObject
 
 @property (nonatomic, retain) NSString *content;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *edition;
-@property (nonatomic, retain) Category *category;
+@property (nonatomic, retain) HKCategory *category;
 
 @end

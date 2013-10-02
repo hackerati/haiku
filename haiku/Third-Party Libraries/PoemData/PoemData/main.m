@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Greg Karlin. All rights reserved.
 //
 
-#import "Poem.h"
-#import "Category.h"
+#import "HKPoem.h"
+#import "HKCategory.h"
 
 
 static NSManagedObjectModel *managedObjectModel()
@@ -17,7 +17,7 @@ static NSManagedObjectModel *managedObjectModel()
         return model;
     }
     
-    NSString *path = @"PoemData";
+    NSString *path = @"HKPoemDataModel";
     path = [path stringByDeletingPathExtension];
     NSURL *modelURL = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"momd"]];
     model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -49,6 +49,8 @@ static NSManagedObjectContext *managedObjectContext()
         
         if (newStore == nil) {
             NSLog(@"Store Configuration Failure %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
+        } else {
+            NSLog(@"Saving generated db to %@", url.path);
         }
     }
     return context;
@@ -61,7 +63,7 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
     
     for (NSJSONSerialization * poem in allPoems)
     {
-        Poem *newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"Poem" inManagedObjectContext:context];
+        HKPoem *newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"HKPoem" inManagedObjectContext:context];
         
         newPoem.title = [[poem valueForKey:@"title"] valueForKey:@"$t"];
         newPoem.content = [[poem valueForKey:@"content"] valueForKey:@"$t"];
@@ -71,7 +73,7 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         for (NSJSONSerialization * category in categories)
         {
             NSString *categoryTerm = [category valueForKey:@"term"];
-            Category *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
+            HKCategory *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"HKCategory" inManagedObjectContext:context];
             
             newCategory.name = categoryTerm;
             newPoem.category = newCategory;

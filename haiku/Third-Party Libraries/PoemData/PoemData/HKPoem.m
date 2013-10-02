@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Greg Karlin. All rights reserved.
 //
 
-#import "Poem.h"
-#import "Category.h"
+#import "HKPoem.h"
+#import "HKCategory.h"
 
 
-@implementation Poem
+@implementation HKPoem
 
 @dynamic content;
 @dynamic title;
