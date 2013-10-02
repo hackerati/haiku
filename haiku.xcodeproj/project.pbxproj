@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		969C535D17FCAA9C00B959A3 /* HKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 969C535817FCAA9C00B959A3 /* HKCategory.m */; };
+		969C535E17FCAA9C00B959A3 /* HKPoem.m in Sources */ = {isa = PBXBuildFile; fileRef = 969C535A17FCAA9C00B959A3 /* HKPoem.m */; };
+		969C535F17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 969C535B17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld */; };
+		969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 969C536917FCAEE800B959A3 /* PoemData.sqlite */; };
 		9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED6617E53ACA00D32549 /* HKBaseViewController.m */; };
 		9C4CED6B17E53B1300D32549 /* HKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */; };
 		9C4CED7517E53C6800D32549 /* HKPoemsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CED7417E53C6800D32549 /* HKPoemsListViewController.m */; };
@@ -18,12 +22,6 @@
 		9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */; };
 		9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */; };
 		9CB5CD2D17FBB17A00DD01BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */; };
-		9CB5CD3817FBB22800DD01BC /* HKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3517FBB22800DD01BC /* HKCategory.m */; };
-		9CB5CD3917FBB22800DD01BC /* HKPoem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3717FBB22800DD01BC /* HKPoem.m */; };
-		9CB5CD3E17FBB39D00DD01BC /* jp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3B17FBB39D00DD01BC /* jp.json */; };
-		9CB5CD3F17FBB39D00DD01BC /* sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3C17FBB39D00DD01BC /* sp.json */; };
-		9CB5CD4017FBB39D00DD01BC /* us.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3D17FBB39D00DD01BC /* us.json */; };
-		9CB5CD4617FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */; };
 		C7A8D25E17E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
 		C7A8D26017E1397800D235ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25F17E1397800D235ED /* CoreGraphics.framework */; };
 		C7A8D26217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
@@ -51,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		969C535717FCAA9C00B959A3 /* HKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCategory.h; path = "Third-Party Libraries/PoemData/PoemData/HKCategory.h"; sourceTree = "<group>"; };
+		969C535817FCAA9C00B959A3 /* HKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCategory.m; path = "Third-Party Libraries/PoemData/PoemData/HKCategory.m"; sourceTree = "<group>"; };
+		969C535917FCAA9C00B959A3 /* HKPoem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKPoem.h; path = "Third-Party Libraries/PoemData/PoemData/HKPoem.h"; sourceTree = "<group>"; };
+		969C535A17FCAA9C00B959A3 /* HKPoem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKPoem.m; path = "Third-Party Libraries/PoemData/PoemData/HKPoem.m"; sourceTree = "<group>"; };
+		969C535C17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKPoemDataModel.xcdatamodel; sourceTree = "<group>"; };
+		969C536917FCAEE800B959A3 /* PoemData.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoemData.sqlite; sourceTree = "<group>"; };
 		9C4CED6517E53ACA00D32549 /* HKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKBaseViewController.h; path = "Classes/View Controllers/HKBaseViewController/HKBaseViewController.h"; sourceTree = "<group>"; };
 		9C4CED6617E53ACA00D32549 /* HKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKBaseViewController.m; path = "Classes/View Controllers/HKBaseViewController/HKBaseViewController.m"; sourceTree = "<group>"; };
 		9C4CED6917E53B1300D32549 /* HKHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKHomeViewController.h; path = "Classes/View Controllers/HKHomeViewController/HKHomeViewController.h"; sourceTree = "<group>"; };
@@ -70,14 +74,9 @@
 		9CB5CD2917FBB0F400DD01BC /* HKCoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCoreDataHandler.h; path = Classes/CoreData/HKCoreDataHandler.h; sourceTree = "<group>"; };
 		9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCoreDataHandler.m; path = Classes/CoreData/HKCoreDataHandler.m; sourceTree = "<group>"; };
 		9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		9CB5CD3417FBB22800DD01BC /* HKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCategory.h; path = Classes/CoreData/HKCategory.h; sourceTree = "<group>"; };
-		9CB5CD3517FBB22800DD01BC /* HKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCategory.m; path = Classes/CoreData/HKCategory.m; sourceTree = "<group>"; };
-		9CB5CD3617FBB22800DD01BC /* HKPoem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKPoem.h; path = Classes/CoreData/HKPoem.h; sourceTree = "<group>"; };
-		9CB5CD3717FBB22800DD01BC /* HKPoem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKPoem.m; path = Classes/CoreData/HKPoem.m; sourceTree = "<group>"; };
 		9CB5CD3B17FBB39D00DD01BC /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jp.json; sourceTree = "<group>"; };
 		9CB5CD3C17FBB39D00DD01BC /* sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sp.json; sourceTree = "<group>"; };
 		9CB5CD3D17FBB39D00DD01BC /* us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = us.json; sourceTree = "<group>"; };
-		9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKPoemDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C7A8D25A17E1397800D235ED /* haiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D25D17E1397800D235ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7A8D25F17E1397800D235ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +122,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		969C535617FCAA3800B959A3 /* PoemData */ = {
+			isa = PBXGroup;
+			children = (
+				969C536917FCAEE800B959A3 /* PoemData.sqlite */,
+				969C535717FCAA9C00B959A3 /* HKCategory.h */,
+				969C535817FCAA9C00B959A3 /* HKCategory.m */,
+				969C535917FCAA9C00B959A3 /* HKPoem.h */,
+				969C535A17FCAA9C00B959A3 /* HKPoem.m */,
+				969C535B17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld */,
+			);
+			name = PoemData;
+			sourceTree = "<group>";
+		};
 		9C4CED6217E53A8500D32549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +232,7 @@
 		9C4CED8817E556A400D32549 /* Third-Party Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				969C535617FCAA3800B959A3 /* PoemData */,
 				9C4CEE9817E5579F00D32549 /* SWRevealViewController */,
 			);
 			name = "Third-Party Libraries";
@@ -237,13 +250,8 @@
 		9CB5CD2817FBB0C800DD01BC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */,
 				9CB5CD2917FBB0F400DD01BC /* HKCoreDataHandler.h */,
 				9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */,
-				9CB5CD3417FBB22800DD01BC /* HKCategory.h */,
-				9CB5CD3517FBB22800DD01BC /* HKCategory.m */,
-				9CB5CD3617FBB22800DD01BC /* HKPoem.h */,
-				9CB5CD3717FBB22800DD01BC /* HKPoem.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -412,14 +420,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */,
 				C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */,
 				9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */,
 				9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */,
 				C7A8D27917E1397800D235ED /* Images.xcassets in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
-				9CB5CD4017FBB39D00DD01BC /* us.json in Resources */,
-				9CB5CD3F17FBB39D00DD01BC /* sp.json in Resources */,
-				9CB5CD3E17FBB39D00DD01BC /* jp.json in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,12 +448,12 @@
 				9C4CED7517E53C6800D32549 /* HKPoemsListViewController.m in Sources */,
 				9C4CED7817E53C8200D32549 /* HKFavoritePoemsViewController.m in Sources */,
 				C7A8D26A17E1397800D235ED /* main.m in Sources */,
-				9CB5CD3917FBB22800DD01BC /* HKPoem.m in Sources */,
+				969C535E17FCAA9C00B959A3 /* HKPoem.m in Sources */,
 				9C4CED7B17E53C9900D32549 /* HKAllPoemsViewController.m in Sources */,
+				969C535F17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld in Sources */,
+				969C535D17FCAA9C00B959A3 /* HKCategory.m in Sources */,
 				9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */,
 				9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */,
-				9CB5CD3817FBB22800DD01BC /* HKCategory.m in Sources */,
-				9CB5CD4617FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld in Sources */,
 				9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */,
 				9C4CED6B17E53B1300D32549 /* HKHomeViewController.m in Sources */,
 				C7A8D26E17E1397800D235ED /* HKAppDelegate.m in Sources */,
@@ -678,14 +684,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */ = {
+		969C535B17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */,
+				969C535C17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodel */,
 			);
-			currentVersion = 9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */;
+			currentVersion = 969C535C17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodel */;
 			name = HKPoemDataModel.xcdatamodeld;
-			path = Classes/CoreData/HKPoemDataModel.xcdatamodeld;
+			path = "Third-Party Libraries/PoemData/PoemData/HKPoemDataModel.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

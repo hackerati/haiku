@@ -7,13 +7,11 @@
 //
 
 #import "HKAppDelegate.h"
-#import "HKCoreDataHandler.h"
 
 @implementation HKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [HKCoreDataHandler initializeDataStore];
     return YES;
 }
 							

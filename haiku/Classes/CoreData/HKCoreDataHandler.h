@@ -10,7 +10,6 @@
 
 @interface HKCoreDataHandler : NSObject
 
-+ (void)initializeDataStore;
 + (id)sharedManager;
 
 - (NSArray *)getAllPoems;
