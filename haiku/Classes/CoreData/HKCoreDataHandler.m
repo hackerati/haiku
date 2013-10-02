@@ -1,14 +1,14 @@
 //
-//  main.m
-//  PoemData
+//  HKCoreDataHandler.m
+//  haiku
 //
-//  Created by Greg Karlin on 9/25/13.
-//  Copyright (c) 2013 Greg Karlin. All rights reserved.
+//  Created by Kevin Tulod on 10/1/13.
+//  Copyright (c) 2013 The Hackerati. All rights reserved.
 //
 
-#import "Poem.h"
-#import "Category.h"
-
+#import "HKCoreDataHandler.h"
+#import "HKPoem.h"
+#import "HKCategory.h"
 
 static NSManagedObjectModel *managedObjectModel()
 {
@@ -17,9 +17,9 @@ static NSManagedObjectModel *managedObjectModel()
         return model;
     }
     
-    NSString *path = @"PoemData";
+    NSString *path = @"HKPoemDataModel";
     path = [path stringByDeletingPathExtension];
-    NSURL *modelURL = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"momd"]];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:path withExtension:@"momd"];
     model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
     return model;
@@ -31,21 +31,19 @@ static NSManagedObjectContext *managedObjectContext()
     if (context != nil) {
         return context;
     }
-
+    
     @autoreleasepool {
         context = [[NSManagedObjectContext alloc] init];
         
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel()];
         [context setPersistentStoreCoordinator:coordinator];
         
-        NSString *STORE_TYPE = NSSQLiteStoreType;
-        
         NSString *path = [[NSProcessInfo processInfo] arguments][0];
         path = [path stringByDeletingPathExtension];
         NSURL *url = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"sqlite"]];
         
         NSError *error;
-        NSPersistentStore *newStore = [coordinator addPersistentStoreWithType:STORE_TYPE configuration:nil URL:url options:nil error:&error];
+        NSPersistentStore *newStore = [coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error];
         
         if (newStore == nil) {
             NSLog(@"Store Configuration Failure %@", ([error localizedDescription] != nil) ? [error localizedDescription] : @"Unknown Error");
@@ -61,7 +59,7 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
     
     for (NSJSONSerialization * poem in allPoems)
     {
-        Poem *newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"Poem" inManagedObjectContext:context];
+        HKPoem *newPoem = [NSEntityDescription insertNewObjectForEntityForName:@"HKPoem" inManagedObjectContext:context];
         
         newPoem.title = [[poem valueForKey:@"title"] valueForKey:@"$t"];
         newPoem.content = [[poem valueForKey:@"content"] valueForKey:@"$t"];
@@ -71,7 +69,7 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         for (NSJSONSerialization * category in categories)
         {
             NSString *categoryTerm = [category valueForKey:@"term"];
-            Category *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:context];
+            HKCategory *newCategory = [NSEntityDescription insertNewObjectForEntityForName:@"HKCategory" inManagedObjectContext:context];
             
             newCategory.name = categoryTerm;
             newPoem.category = newCategory;
@@ -81,19 +79,18 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
     return 0;
 }
 
-int main(int argc, const char * argv[])
+void createDataStore()
 {
-
     @autoreleasepool {
         NSManagedObjectContext *context = managedObjectContext();
         NSError* err = nil;
-        NSArray *poemSrc = [NSArray arrayWithObjects:@"matsushita-us", @"matsushita-jp", @"matsushita-sp", nil];
+        NSArray *poemSrc = [NSArray arrayWithObjects:@"us", @"jp", @"sp", nil];
         
         for (NSString *editionSrc in poemSrc) {
-            NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"matsushita-us" ofType:@"json"];
+            NSString* dataPath = [[NSBundle mainBundle] pathForResource:editionSrc ofType:@"json"];
             NSJSONSerialization* poemData = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
-                                                                                 options:kNilOptions
-                                                                                   error:&err];
+                                                                            options:kNilOptions
+                                                                              error:&err];
             addPoemDataToContext(poemData, context, editionSrc);
         }
         // Save the managed object context
@@ -103,5 +100,58 @@ int main(int argc, const char * argv[])
             exit(1);
         }
     }
-    return 0;
 }
+
+@interface HKCoreDataHandler()
+
+@property NSManagedObjectContext *poemDataContext;
+
+@end
+
+@implementation HKCoreDataHandler
+
++ (void)initializeDataStore
+{
+    // Check if the sqlite database has been created. If not, create it.
+    NSString *path = [[NSProcessInfo processInfo] arguments][0];
+    path = [path stringByDeletingPathExtension];
+    NSURL *dbURL = [NSURL fileURLWithPath:[path stringByAppendingPathExtension:@"sqlite"]];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[dbURL path]]) {
+        createDataStore();
+    }
+}
+
+#pragma mark - Singleton methods
++ (id)sharedManager {
+    static HKCoreDataHandler *cdhMgr = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cdhMgr = [[self alloc] init];
+    });
+    return cdhMgr;
+}
+
+- (id)init {
+    if (self = [super init]) {
+        self.poemDataContext = managedObjectContext();
+        self.allPoems = [self getAllPoems];
+        self.favoritePoems = [self getAllPoems];
+    }
+    return self;
+}
+
+- (NSArray *)getAllPoems
+{
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"HKPoem" inManagedObjectContext:self.poemDataContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:entity];
+    
+    NSError *error;
+    NSArray *results = [self.poemDataContext executeFetchRequest:request error:&error];
+    
+    return results;
+}
+
+
+@end

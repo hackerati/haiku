@@ -37,8 +37,10 @@
 
 #pragma mark - UITableView Methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HKPoem *poem = self.poemData.favoritePoems[indexPath.row];
+    
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"Favorite Poem Title";
+    cell.textLabel.text = poem.title;
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;
 }
@@ -48,7 +50,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.poemData.favoritePoems count];
 }
 
 @end

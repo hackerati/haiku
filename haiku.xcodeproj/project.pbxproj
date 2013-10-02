@@ -16,6 +16,14 @@
 		9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8417E54D1A00D32549 /* iphone_tmpl.html */; };
 		9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */; };
 		9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */; };
+		9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */; };
+		9CB5CD2D17FBB17A00DD01BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */; };
+		9CB5CD3817FBB22800DD01BC /* HKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3517FBB22800DD01BC /* HKCategory.m */; };
+		9CB5CD3917FBB22800DD01BC /* HKPoem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3717FBB22800DD01BC /* HKPoem.m */; };
+		9CB5CD3E17FBB39D00DD01BC /* jp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3B17FBB39D00DD01BC /* jp.json */; };
+		9CB5CD3F17FBB39D00DD01BC /* sp.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3C17FBB39D00DD01BC /* sp.json */; };
+		9CB5CD4017FBB39D00DD01BC /* us.json in Resources */ = {isa = PBXBuildFile; fileRef = 9CB5CD3D17FBB39D00DD01BC /* us.json */; };
+		9CB5CD4617FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */; };
 		C7A8D25E17E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
 		C7A8D26017E1397800D235ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25F17E1397800D235ED /* CoreGraphics.framework */; };
 		C7A8D26217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
@@ -59,6 +67,17 @@
 		9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = iphone_tmpl.css; path = "Resources/HTML Templates/iphone_tmpl.css"; sourceTree = "<group>"; };
 		9C4CEE9917E557B100D32549 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		9CB5CD2917FBB0F400DD01BC /* HKCoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCoreDataHandler.h; path = Classes/CoreData/HKCoreDataHandler.h; sourceTree = "<group>"; };
+		9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCoreDataHandler.m; path = Classes/CoreData/HKCoreDataHandler.m; sourceTree = "<group>"; };
+		9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9CB5CD3417FBB22800DD01BC /* HKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCategory.h; path = Classes/CoreData/HKCategory.h; sourceTree = "<group>"; };
+		9CB5CD3517FBB22800DD01BC /* HKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCategory.m; path = Classes/CoreData/HKCategory.m; sourceTree = "<group>"; };
+		9CB5CD3617FBB22800DD01BC /* HKPoem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKPoem.h; path = Classes/CoreData/HKPoem.h; sourceTree = "<group>"; };
+		9CB5CD3717FBB22800DD01BC /* HKPoem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKPoem.m; path = Classes/CoreData/HKPoem.m; sourceTree = "<group>"; };
+		9CB5CD3B17FBB39D00DD01BC /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jp.json; sourceTree = "<group>"; };
+		9CB5CD3C17FBB39D00DD01BC /* sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sp.json; sourceTree = "<group>"; };
+		9CB5CD3D17FBB39D00DD01BC /* us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = us.json; sourceTree = "<group>"; };
+		9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKPoemDataModel.xcdatamodel; sourceTree = "<group>"; };
 		C7A8D25A17E1397800D235ED /* haiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D25D17E1397800D235ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7A8D25F17E1397800D235ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB5CD2D17FBB17A00DD01BC /* CoreData.framework in Frameworks */,
 				C7A8D26017E1397800D235ED /* CoreGraphics.framework in Frameworks */,
 				C7A8D26217E1397800D235ED /* UIKit.framework in Frameworks */,
 				C7A8D25E17E1397800D235ED /* Foundation.framework in Frameworks */,
@@ -106,6 +126,7 @@
 		9C4CED6217E53A8500D32549 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9CB5CD2817FBB0C800DD01BC /* CoreData */,
 				9C4CED6317E53A8C00D32549 /* View Controllers */,
 				9C4CED7C17E541D000D32549 /* HKPoemWebView */,
 			);
@@ -181,6 +202,7 @@
 		9C4CED8217E54A5F00D32549 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9CB5CD3A17FBB39D00DD01BC /* PoemsJSON */,
 				9C4CED8317E54C0B00D32549 /* HTML Templates */,
 			);
 			name = Resources;
@@ -212,6 +234,31 @@
 			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		9CB5CD2817FBB0C800DD01BC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */,
+				9CB5CD2917FBB0F400DD01BC /* HKCoreDataHandler.h */,
+				9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */,
+				9CB5CD3417FBB22800DD01BC /* HKCategory.h */,
+				9CB5CD3517FBB22800DD01BC /* HKCategory.m */,
+				9CB5CD3617FBB22800DD01BC /* HKPoem.h */,
+				9CB5CD3717FBB22800DD01BC /* HKPoem.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		9CB5CD3A17FBB39D00DD01BC /* PoemsJSON */ = {
+			isa = PBXGroup;
+			children = (
+				9CB5CD3B17FBB39D00DD01BC /* jp.json */,
+				9CB5CD3C17FBB39D00DD01BC /* sp.json */,
+				9CB5CD3D17FBB39D00DD01BC /* us.json */,
+			);
+			name = PoemsJSON;
+			path = Resources/PoemsJSON;
+			sourceTree = "<group>";
+		};
 		C7A8D25117E1397800D235ED = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +281,7 @@
 		C7A8D25C17E1397800D235ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */,
 				C7A8D25D17E1397800D235ED /* Foundation.framework */,
 				C7A8D25F17E1397800D235ED /* CoreGraphics.framework */,
 				C7A8D26117E1397800D235ED /* UIKit.framework */,
@@ -369,6 +417,9 @@
 				9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */,
 				C7A8D27917E1397800D235ED /* Images.xcassets in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
+				9CB5CD4017FBB39D00DD01BC /* us.json in Resources */,
+				9CB5CD3F17FBB39D00DD01BC /* sp.json in Resources */,
+				9CB5CD3E17FBB39D00DD01BC /* jp.json in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +442,12 @@
 				9C4CED7517E53C6800D32549 /* HKPoemsListViewController.m in Sources */,
 				9C4CED7817E53C8200D32549 /* HKFavoritePoemsViewController.m in Sources */,
 				C7A8D26A17E1397800D235ED /* main.m in Sources */,
+				9CB5CD3917FBB22800DD01BC /* HKPoem.m in Sources */,
 				9C4CED7B17E53C9900D32549 /* HKAllPoemsViewController.m in Sources */,
+				9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */,
 				9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */,
+				9CB5CD3817FBB22800DD01BC /* HKCategory.m in Sources */,
+				9CB5CD4617FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld in Sources */,
 				9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */,
 				9C4CED6B17E53B1300D32549 /* HKHomeViewController.m in Sources */,
 				C7A8D26E17E1397800D235ED /* HKAppDelegate.m in Sources */,
@@ -621,6 +676,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9CB5CD4417FBB71200DD01BC /* HKPoemDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */,
+			);
+			currentVersion = 9CB5CD4517FBB71200DD01BC /* HKPoemDataModel.xcdatamodel */;
+			name = HKPoemDataModel.xcdatamodeld;
+			path = Classes/CoreData/HKPoemDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C7A8D25217E1397800D235ED /* Project object */;
 }
