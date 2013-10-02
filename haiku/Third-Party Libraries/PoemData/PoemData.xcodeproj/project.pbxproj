@@ -10,12 +10,12 @@
 		22DD51D717F3BBC6008EE791 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DD51D617F3BBC6008EE791 /* CoreData.framework */; };
 		22DD51D917F3BBC6008EE791 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DD51D817F3BBC6008EE791 /* Foundation.framework */; };
 		22DD51DC17F3BBC6008EE791 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51DB17F3BBC6008EE791 /* main.m */; };
-		22DD51E117F3BBC6008EE791 /* PoemData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51DF17F3BBC6008EE791 /* PoemData.xcdatamodeld */; };
-		22DD51EB17F3C16D008EE791 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51EA17F3C16D008EE791 /* Category.m */; };
-		22DD51EE17F3C16D008EE791 /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DD51ED17F3C16D008EE791 /* Poem.m */; };
 		964CE7AC17F60C030009C741 /* matsushita-jp.json in Copy Files */ = {isa = PBXBuildFile; fileRef = 964CE7A917F60BCA0009C741 /* matsushita-jp.json */; };
 		964CE7AD17F60C030009C741 /* matsushita-sp.json in Copy Files */ = {isa = PBXBuildFile; fileRef = 964CE7AA17F60BCA0009C741 /* matsushita-sp.json */; };
 		964CE7AE17F60C030009C741 /* matsushita-us.json in Copy Files */ = {isa = PBXBuildFile; fileRef = 964CE7AB17F60BCA0009C741 /* matsushita-us.json */; };
+		969C536617FCAAC500B959A3 /* HKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 969C536117FCAAC500B959A3 /* HKCategory.m */; };
+		969C536717FCAAC500B959A3 /* HKPoem.m in Sources */ = {isa = PBXBuildFile; fileRef = 969C536317FCAAC500B959A3 /* HKPoem.m */; };
+		969C536817FCAAC500B959A3 /* HKPoemDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 969C536417FCAAC500B959A3 /* HKPoemDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,15 +40,15 @@
 		22DD51D817F3BBC6008EE791 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22DD51DB17F3BBC6008EE791 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22DD51DE17F3BBC6008EE791 /* PoemData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PoemData-Prefix.pch"; sourceTree = "<group>"; };
-		22DD51E017F3BBC6008EE791 /* PoemData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PoemData.xcdatamodel; sourceTree = "<group>"; };
 		22DD51E217F3BBC6008EE791 /* PoemData.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PoemData.1; sourceTree = "<group>"; };
-		22DD51E917F3C16D008EE791 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		22DD51EA17F3C16D008EE791 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
-		22DD51EC17F3C16D008EE791 /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
-		22DD51ED17F3C16D008EE791 /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
 		964CE7A917F60BCA0009C741 /* matsushita-jp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "matsushita-jp.json"; sourceTree = "<group>"; };
 		964CE7AA17F60BCA0009C741 /* matsushita-sp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "matsushita-sp.json"; sourceTree = "<group>"; };
 		964CE7AB17F60BCA0009C741 /* matsushita-us.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "matsushita-us.json"; sourceTree = "<group>"; };
+		969C536017FCAAC500B959A3 /* HKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKCategory.h; sourceTree = "<group>"; };
+		969C536117FCAAC500B959A3 /* HKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKCategory.m; sourceTree = "<group>"; };
+		969C536217FCAAC500B959A3 /* HKPoem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HKPoem.h; sourceTree = "<group>"; };
+		969C536317FCAAC500B959A3 /* HKPoem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HKPoem.m; sourceTree = "<group>"; };
+		969C536517FCAAC500B959A3 /* HKPoemDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HKPoemDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +96,11 @@
 				964CE7A817F60BCA0009C741 /* PoemsJSON */,
 				22DD51DB17F3BBC6008EE791 /* main.m */,
 				22DD51E217F3BBC6008EE791 /* PoemData.1 */,
-				22DD51DF17F3BBC6008EE791 /* PoemData.xcdatamodeld */,
-				22DD51EC17F3C16D008EE791 /* Poem.h */,
-				22DD51ED17F3C16D008EE791 /* Poem.m */,
-				22DD51E917F3C16D008EE791 /* Category.h */,
-				22DD51EA17F3C16D008EE791 /* Category.m */,
+				969C536017FCAAC500B959A3 /* HKCategory.h */,
+				969C536117FCAAC500B959A3 /* HKCategory.m */,
+				969C536217FCAAC500B959A3 /* HKPoem.h */,
+				969C536317FCAAC500B959A3 /* HKPoem.m */,
+				969C536417FCAAC500B959A3 /* HKPoemDataModel.xcdatamodeld */,
 				22DD51DD17F3BBC6008EE791 /* Supporting Files */,
 			);
 			path = PoemData;
@@ -175,10 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DD51E117F3BBC6008EE791 /* PoemData.xcdatamodeld in Sources */,
-				22DD51EB17F3C16D008EE791 /* Category.m in Sources */,
-				22DD51EE17F3C16D008EE791 /* Poem.m in Sources */,
+				969C536717FCAAC500B959A3 /* HKPoem.m in Sources */,
+				969C536617FCAAC500B959A3 /* HKCategory.m in Sources */,
 				22DD51DC17F3BBC6008EE791 /* main.m in Sources */,
+				969C536817FCAAC500B959A3 /* HKPoemDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,13 +295,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		22DD51DF17F3BBC6008EE791 /* PoemData.xcdatamodeld */ = {
+		969C536417FCAAC500B959A3 /* HKPoemDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				22DD51E017F3BBC6008EE791 /* PoemData.xcdatamodel */,
+				969C536517FCAAC500B959A3 /* HKPoemDataModel.xcdatamodel */,
 			);
-			currentVersion = 22DD51E017F3BBC6008EE791 /* PoemData.xcdatamodel */;
-			path = PoemData.xcdatamodeld;
+			currentVersion = 969C536517FCAAC500B959A3 /* HKPoemDataModel.xcdatamodel */;
+			path = HKPoemDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

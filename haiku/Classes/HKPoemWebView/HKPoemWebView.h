@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HKPoem;
 
 @interface HKPoemWebView : UIWebView
 {
     
 }
 
-- (void)loadNewPoem; // Temporary load method
+- (void)loadPoem:(HKPoem *)poem;
 
 @end

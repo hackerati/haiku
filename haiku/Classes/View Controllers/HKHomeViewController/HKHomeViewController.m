@@ -11,6 +11,7 @@
 #import "SWRevealViewController.h"
 #import "HKPoemWebView.h"
 
+
 @interface HKHomeViewController ()
 {
 }
@@ -47,7 +48,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.poemWebView loadNewPoem];
+    [self.poemWebView loadPoem:self.poemData.allPoems[0]];
 }
 
 - (void)didReceiveMemoryWarning

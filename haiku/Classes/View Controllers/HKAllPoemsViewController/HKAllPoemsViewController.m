@@ -8,7 +8,10 @@
 
 #import "HKAllPoemsViewController.h"
 
+
 @interface HKAllPoemsViewController ()
+
+@property HKCoreDataHandler *poemData;
 
 @end
 
@@ -37,8 +40,10 @@
 
 #pragma mark - UITableView Methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HKPoem *poem = self.poemData.allPoems[indexPath.row];
+
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"Poem Title";
+    cell.textLabel.text = poem.title;
     return cell;
 }
 
@@ -47,7 +52,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.poemData.allPoems count];
 }
 
 @end

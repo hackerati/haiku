@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HKCoreDataHandler.h"
+#import "HKPoem.h"
 
 @interface HKBaseViewController : UIViewController
 
 - (void) raiseExceptionForAbstractMethod;
+
+@property HKCoreDataHandler *poemData;
 
 @end

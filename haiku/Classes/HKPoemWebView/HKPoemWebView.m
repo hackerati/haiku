@@ -7,6 +7,7 @@
 //
 
 #import "HKPoemWebView.h"
+#import "HKPoem.h"
 
 @interface HKPoemWebView()
 
@@ -36,14 +37,15 @@
 
 #pragma mark - Haiku app custom functions
 
-// TODO: Load a poem from a CoreData entity
-
-- (void)loadNewPoem {
+- (void)loadPoem:(HKPoem *)poem {
     // Temporary load method.
 
     NSString *htmlTemplate = [[NSBundle mainBundle] pathForResource:@"iphone_tmpl" ofType:@"html"];
     NSString *html = [NSString stringWithContentsOfFile:htmlTemplate
                                                encoding:NSUTF8StringEncoding error:nil];
+
+    html = [html stringByReplacingOccurrencesOfString:@"{{title}}" withString:poem.title];
+    html = [html stringByReplacingOccurrencesOfString:@"{{content}}" withString:poem.content];
 
     [self setPoemHtmlString:html];
 
