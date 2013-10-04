@@ -83,17 +83,49 @@ static NSManagedObjectContext *managedObjectContext()
     return self;
 }
 
-- (NSArray *)getAllPoems
+- (NSFetchRequest *)basePoemRequest
 {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"HKPoem" inManagedObjectContext:self.poemDataContext];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
     
+    
+    
+    return request;
+}
+
+- (NSArray *)sendFetchRequest:(NSFetchRequest *)request
+{
     NSError *error;
     NSArray *results = [self.poemDataContext executeFetchRequest:request error:&error];
+    
+    if (error != nil) {
+        NSLog(@"Fetch error occurred with request: %@", request);
+        return [[NSArray alloc] init];
+    }
     
     return results;
 }
 
+- (NSArray *)getAllPoems
+{
+    NSFetchRequest *request = [self basePoemRequest];
+    return [self sendFetchRequest: request];
+}
+
+- (NSArray *)getAllPoemsByEdition:(NSString *)editionId
+{
+    
+}
+
+- (NSArray *)getFavoritePoems
+{
+    
+}
+
+- (NSArray *)getFavoritePoemsForEdition:(NSString *)editionId
+{
+    
+}
 
 @end
