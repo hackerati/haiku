@@ -10,4 +10,6 @@
 
 @interface HKPoemsListViewController : HKBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property IBOutlet UITableView *poemTableView;
+
 @end

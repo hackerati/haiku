@@ -29,6 +29,11 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.poemTableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -39,7 +44,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HKPoem *poem = self.poemData.favoritePoems[indexPath.row];
     
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"poemCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"poemCell"];
+    }
+    
     cell.textLabel.text = poem.title;
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;

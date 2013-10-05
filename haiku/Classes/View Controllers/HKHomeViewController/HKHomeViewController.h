@@ -12,4 +12,6 @@
 
 @interface HKHomeViewController : HKBaseViewController
 
+@property (nonatomic, strong) HKPoem *currentPoem;
+
 @end

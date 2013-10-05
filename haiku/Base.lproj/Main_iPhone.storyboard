@@ -70,7 +70,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="J9t-MK-v7y"/>
-                                    <barButtonItem title="Fave" id="uGz-y8-nrm"/>
+                                    <barButtonItem title="Fave" id="uGz-y8-nrm">
+                                        <connections>
+                                            <action selector="toggleFavorite:" destination="vXZ-lx-hvc" id="HvD-l0-goH"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -79,6 +83,7 @@
                     <navigationItem key="navigationItem" id="dWY-Jm-oOu"/>
                     <connections>
                         <outlet property="poemWebView" destination="Cv8-Zd-jf0" id="UYB-ch-fph"/>
+                        <outlet property="toggleFaveButtonItem" destination="uGz-y8-nrm" id="a90-US-orV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -137,6 +142,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="poemTableView" destination="psD-fr-l6o" id="Wti-o9-zez"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2g-Wx-TIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
