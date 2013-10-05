@@ -13,6 +13,9 @@
 + (id)sharedManager;
 
 - (NSArray *)getAllPoems;
+- (NSArray *)getAllPoemsByEdition:(NSString *)editionId;
+- (NSArray *)getFavoritePoems;
+- (NSArray *)getFavoritePoemsForEdition:(NSString *)editionId;
 
 @property NSArray *allPoems;
 @property NSArray *favoritePoems;
