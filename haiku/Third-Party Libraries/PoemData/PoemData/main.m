@@ -67,6 +67,9 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         
         newPoem.title = [[poem valueForKey:@"title"] valueForKey:@"$t"];
         newPoem.content = [[poem valueForKey:@"content"] valueForKey:@"$t"];
+        newPoem.edition = edition;
+        newPoem.isFavorite = NO;
+        newPoem.publishDate = [[poem valueForKey:@"published"] valueForKey:@"$t"];
         
         NSArray *categories = [poem valueForKey:@"category"];
         
@@ -77,7 +80,6 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
             
             newCategory.name = categoryTerm;
             newPoem.category = newCategory;
-            newPoem.edition = edition;
         }
     }
     return 0;
@@ -85,14 +87,13 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
 
 int main(int argc, const char * argv[])
 {
-
     @autoreleasepool {
         NSManagedObjectContext *context = managedObjectContext();
         NSError* err = nil;
         NSArray *poemSrc = [NSArray arrayWithObjects:@"matsushita-us", @"matsushita-jp", @"matsushita-sp", nil];
         
         for (NSString *editionSrc in poemSrc) {
-            NSString* dataPath = [[NSBundle mainBundle] pathForResource:@"matsushita-us" ofType:@"json"];
+            NSString* dataPath = [[NSBundle mainBundle] pathForResource:editionSrc ofType:@"json"];
             NSJSONSerialization* poemData = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:dataPath]
                                                                                  options:kNilOptions
                                                                                    error:&err];
