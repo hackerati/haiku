@@ -10,4 +10,6 @@
 
 @interface HKFavoritePoemsViewController : HKPoemsListViewController
 
+- (void)reloadTable;
+
 @end
