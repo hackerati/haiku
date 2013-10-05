@@ -14,6 +14,15 @@
 
 @implementation HKFavoritePoemsViewController
 
+- (id)init
+{
+    self = [super initWithNibName:@"HKFavoritePoemsViewController_iPhone" bundle:nil];
+    if (self != nil){
+        // Custom initialization
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -31,13 +40,18 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.poemTableView reloadData];
+    [self reloadTable];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)reloadTable
+{
+    [self.poemTableView reloadData];
 }
 
 #pragma mark - UITableView Methods

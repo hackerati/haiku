@@ -26,6 +26,15 @@
 
 @implementation HKHomeViewController
 
+- (id)init
+{
+    self = [super initWithNibName:@"HKHomeViewController_iPhone" bundle:nil];
+    if (self != nil){
+        // Custom initialization
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -40,11 +49,11 @@
     [super viewDidLoad];
 
     // Set SWRevealViewController Options
-    [self.revealAllButtonItem setTarget:self.revealViewController];
-    [self.revealAllButtonItem setAction:@selector(revealToggle:)];
-    [self.revealFavesButtonItem setTarget:self.revealViewController];
-    [self.revealFavesButtonItem setAction:@selector(rightRevealToggle:)];
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+//    [self.revealAllButtonItem setTarget:self.revealViewController];
+//    [self.revealAllButtonItem setAction:@selector(revealToggle:)];
+//    [self.revealFavesButtonItem setTarget:self.revealViewController];
+//    [self.revealFavesButtonItem setAction:@selector(rightRevealToggle:)];
+//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 }
 

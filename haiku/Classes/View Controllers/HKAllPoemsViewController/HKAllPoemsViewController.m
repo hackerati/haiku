@@ -17,6 +17,15 @@
 
 @implementation HKAllPoemsViewController
 
+- (id)init
+{
+    self = [super initWithNibName:@"HKAllPoemsViewController_iPhone" bundle:nil];
+    if (self != nil){
+        // Custom initialization
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
