@@ -78,7 +78,7 @@ static NSManagedObjectContext *managedObjectContext()
     if (self = [super init]) {
         self.poemDataContext = managedObjectContext();
         self.allPoems = [self getAllPoems];
-        self.favoritePoems = [self getAllPoems];
+        self.favoritePoems = [self getFavoritePoems];
     }
     return self;
 }
@@ -89,7 +89,9 @@ static NSManagedObjectContext *managedObjectContext()
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
     
-    
+    NSSortDescriptor *sortDateDesc = [[NSSortDescriptor alloc] initWithKey:@"publishDate" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDateDesc, nil];
+    [request setSortDescriptors:sortDescriptors];
     
     return request;
 }
@@ -110,22 +112,38 @@ static NSManagedObjectContext *managedObjectContext()
 - (NSArray *)getAllPoems
 {
     NSFetchRequest *request = [self basePoemRequest];
-    return [self sendFetchRequest: request];
+    
+    return [self sendFetchRequest:request];
 }
 
 - (NSArray *)getAllPoemsByEdition:(NSString *)editionId
 {
+    NSFetchRequest *request = [self basePoemRequest];
     
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"edition == %@", editionId];
+    [request setPredicate:p];
+    
+    return [self sendFetchRequest:request];
 }
 
 - (NSArray *)getFavoritePoems
 {
+    NSFetchRequest *request = [self basePoemRequest];
     
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"isFavorite == 1"];
+    [request setPredicate:p];
+    
+    return [self sendFetchRequest:request];
 }
 
 - (NSArray *)getFavoritePoemsForEdition:(NSString *)editionId
 {
+    NSFetchRequest *request = [self basePoemRequest];
     
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"isFavorite == 1 AND edition == %@", editionId];
+    [request setPredicate:p];
+    
+    return [self sendFetchRequest:request];
 }
 
 @end

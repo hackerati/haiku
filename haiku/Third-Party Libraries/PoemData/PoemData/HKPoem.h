@@ -17,5 +17,7 @@
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *edition;
 @property (nonatomic, retain) HKCategory *category;
+@property (nonatomic) BOOL isFavorite;
+@property (nonatomic, retain) NSString *publishDate;
 
 @end

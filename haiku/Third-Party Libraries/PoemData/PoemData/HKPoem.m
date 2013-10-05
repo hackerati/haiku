@@ -16,5 +16,8 @@
 @dynamic title;
 @dynamic edition;
 @dynamic category;
+@dynamic isFavorite;
+@dynamic publishDate;
+
 
 @end

@@ -48,7 +48,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.poemWebView loadPoem:self.poemData.allPoems[0]];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +57,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction) share: (id) sender {
+- (void)loadRandomPoem
+{
+    NSUInteger randIdx = arc4random() % [self.poemData.allPoems count];
+    [self.poemWebView loadPoem:self.poemData.allPoems[randIdx]];
+}
+
+- (IBAction)refreshPoem:(id)sender
+{
+    [self loadRandomPoem];
+}
+
+- (IBAction) share: (id) sender {
     NSString* someText = @"SHMARGUM";// self.textView.text;
     NSArray* dataToShare = @[someText];  // ...or whatever pieces of data you want to share.
     
