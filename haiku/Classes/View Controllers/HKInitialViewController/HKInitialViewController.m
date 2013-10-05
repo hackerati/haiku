@@ -45,9 +45,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.homeViewController = [[HKHomeViewController alloc] init];
-    self.allPoemsViewController = [[HKAllPoemsViewController alloc] init];
-    self.favePoemsViewController = [[HKFavoritePoemsViewController alloc] init];
+    self.homeViewController = [[HKHomeViewController alloc] initWithMainView:self];
+    self.allPoemsViewController = [[HKAllPoemsViewController alloc] initWithMainView:self];
+    self.favePoemsViewController = [[HKFavoritePoemsViewController alloc] initWithMainView:self];
     
     [self initPaginatedView];
 }
@@ -80,10 +80,15 @@
 - (IBAction)pageSelectorChanged:(id)sender
 {
     int page = self.pageSelector.selectedSegmentIndex;
-    if (page == 2) {
+    if (page == HKFavePoemsPage) {
         [self.favePoemsViewController reloadTable];
     }
     
+    [self moveToPage:page];
+}
+
+- (void)moveToPage:(int)page
+{
     // Programmatically move to the next page.
     CGRect frame = self.paginatedView.frame;
     frame.origin.x = frame.size.width*page;
@@ -91,9 +96,9 @@
     [self.paginatedView scrollRectToVisible:frame animated:YES];
 }
 
-- (void)swipedToPage:(int)page
+- (void)didSwipeToPage:(int)page
 {
-    if (page == 2) {
+    if (page == HKFavePoemsPage) {
         [self.favePoemsViewController reloadTable];
     }
     [self.pageSelector setSelectedSegmentIndex:page];
@@ -106,8 +111,16 @@
     NSInteger page = lround(fractionalPage);
     if (previousPage != page) {
         previousPage = page;
-        [self swipedToPage:page];
+        [self didSwipeToPage:page];
     }
+}
+
+- (void)didSelectPoem:(HKPoem *)poem
+{
+    [self.homeViewController loadPoem:poem];
+    
+    [self.pageSelector setSelectedSegmentIndex:HKHomePage];
+    [self moveToPage:HKHomePage];
 }
 
 @end

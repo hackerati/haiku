@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "HKBaseViewController.h"
 
+enum HKPageId {
+    HKAllPoemsPage = 0,
+    HKHomePage = 1,
+    HKFavePoemsPage = 2
+    };
+
 @interface HKInitialViewController : HKBaseViewController <UIScrollViewDelegate>
+
+- (void)didSelectPoem:(HKPoem *)poem;
 
 @end

@@ -7,18 +7,22 @@
 //
 
 #import "HKFavoritePoemsViewController.h"
+#import "HKInitialViewController.h"
 
 @interface HKFavoritePoemsViewController ()
+
+@property HKInitialViewController *mainViewController;
 
 @end
 
 @implementation HKFavoritePoemsViewController
 
-- (id)init
+- (id)initWithMainView:(HKInitialViewController *)mainView
 {
     self = [super initWithNibName:@"HKFavoritePoemsViewController_iPhone" bundle:nil];
     if (self != nil){
         // Custom initialization
+        self.mainViewController = mainView;
     }
     return self;
 }
@@ -66,6 +70,12 @@
     cell.textLabel.text = poem.title;
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HKPoem *poem = self.poemData.favoritePoems[indexPath.row];
+    [self.mainViewController didSelectPoem:poem];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

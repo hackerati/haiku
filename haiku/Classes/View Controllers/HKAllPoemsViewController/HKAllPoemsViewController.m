@@ -7,21 +7,23 @@
 //
 
 #import "HKAllPoemsViewController.h"
-
+#import "HKInitialViewController.h"
 
 @interface HKAllPoemsViewController ()
 
 @property HKCoreDataHandler *poemData;
+@property HKInitialViewController *mainViewController;
 
 @end
 
 @implementation HKAllPoemsViewController
 
-- (id)init
+- (id)initWithMainView:(HKInitialViewController *)mainView
 {
     self = [super initWithNibName:@"HKAllPoemsViewController_iPhone" bundle:nil];
     if (self != nil){
         // Custom initialization
+        self.mainViewController = mainView;
     }
     return self;
 }
@@ -67,6 +69,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.poemData.allPoems count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HKPoem *poem = self.poemData.allPoems[indexPath.row];
+    [self.mainViewController didSelectPoem:poem];
+    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    
 }
 
 @end

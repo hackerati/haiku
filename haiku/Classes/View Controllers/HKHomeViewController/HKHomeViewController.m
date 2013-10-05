@@ -8,6 +8,7 @@
 
 #import "HKHomeViewController.h"
 #import "HKAllPoemsViewController.h"
+#import "HKInitialViewController.h"
 #import "SWRevealViewController.h"
 #import "HKPoemWebView.h"
 #import "HKPoem.h"
@@ -22,15 +23,18 @@
 @property IBOutlet UIBarButtonItem *revealAllButtonItem;
 @property IBOutlet UIBarButtonItem *revealFavesButtonItem;
 
+@property HKInitialViewController *mainViewController;
+
 @end
 
 @implementation HKHomeViewController
 
-- (id)init
+- (id)initWithMainView:(HKInitialViewController *)mainView
 {
     self = [super initWithNibName:@"HKHomeViewController_iPhone" bundle:nil];
     if (self != nil){
         // Custom initialization
+        self.mainViewController = mainView;
     }
     return self;
 }
