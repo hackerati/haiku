@@ -48,7 +48,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-
+    [self loadRandomPoem];
 }
 
 - (void)didReceiveMemoryWarning
