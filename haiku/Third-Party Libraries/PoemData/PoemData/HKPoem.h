@@ -13,6 +13,7 @@
 
 @interface HKPoem : NSManagedObject
 
+@property (nonatomic, retain) NSString *poemId;
 @property (nonatomic, retain) NSString *content;
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *edition;

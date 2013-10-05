@@ -12,6 +12,7 @@
 
 @implementation HKPoem
 
+@dynamic poemId;
 @dynamic content;
 @dynamic title;
 @dynamic edition;

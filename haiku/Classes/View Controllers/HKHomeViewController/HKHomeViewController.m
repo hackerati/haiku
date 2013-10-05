@@ -10,10 +10,12 @@
 #import "HKAllPoemsViewController.h"
 #import "SWRevealViewController.h"
 #import "HKPoemWebView.h"
+#import "HKPoem.h"
 
 
 @interface HKHomeViewController ()
 {
+    IBOutlet UIBarButtonItem *toggleFaveButtonItem;
 }
 
 @property IBOutlet HKPoemWebView *poemWebView;
@@ -60,7 +62,20 @@
 - (void)loadRandomPoem
 {
     NSUInteger randIdx = arc4random() % [self.poemData.allPoems count];
-    [self.poemWebView loadPoem:self.poemData.allPoems[randIdx]];
+    [self loadPoem:self.poemData.allPoems[randIdx]];
+}
+
+- (void)loadPoem:(HKPoem *)poem
+{
+    self.currentPoem = poem;
+    // Set UI based on the current poem's properties
+    if (self.currentPoem.isFavorite)
+        [toggleFaveButtonItem setTitle:@"Unfave"];
+    else
+        [toggleFaveButtonItem setTitle:@"Fave"];
+    
+    // Load the poem
+    [self.poemWebView loadPoem:self.currentPoem];
 }
 
 - (IBAction)refreshPoem:(id)sender
@@ -76,6 +91,13 @@
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare
                                       applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:^{}];
+}
+
+- (IBAction)toggleFavorite:(id)sender
+{
+    HKPoem *updatedPoem = [self.poemData togglePoemFavorite:self.currentPoem];
+    if (updatedPoem != nil)
+        [self loadPoem:updatedPoem];
 }
 
 @end

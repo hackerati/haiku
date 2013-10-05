@@ -40,9 +40,11 @@ static NSManagedObjectContext *managedObjectContext()
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel()];
         [context setPersistentStoreCoordinator:coordinator];
 
-        NSURL *url = [[NSBundle mainBundle] URLForResource:@"PoemData" withExtension:@"sqlite"];
         
-        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], NSReadOnlyPersistentStoreOption, nil];
+        NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+        url = [url URLByAppendingPathComponent:@"PoemData.sqlite"];
+        
+        NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:NO], NSReadOnlyPersistentStoreOption, nil];
         
         NSError *error;
         NSPersistentStore *newStore = [coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:&error];
@@ -82,6 +84,26 @@ static NSManagedObjectContext *managedObjectContext()
     }
     return self;
 }
+
+#pragma mark - Initialization
++ (void)initializeDataStore
+{
+    NSString *appSupportDir = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) lastObject];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:appSupportDir isDirectory:NULL]) {
+        NSError *error = nil;
+        if (![[NSFileManager defaultManager] createDirectoryAtPath:appSupportDir withIntermediateDirectories:YES attributes:nil error:&error]) {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        
+        NSString *staticDbPath = [[NSBundle mainBundle] pathForResource:@"PoemData" ofType:@"sqlite"];
+        NSString *newDbPath = [appSupportDir stringByAppendingPathComponent:@"PoemData.sqlite"];
+        
+        [[NSFileManager defaultManager] copyItemAtPath:staticDbPath toPath:newDbPath error:&error];
+        
+    }
+}
+
+# pragma mark - Poem read requests.
 
 - (NSFetchRequest *)basePoemRequest
 {
@@ -144,6 +166,33 @@ static NSManagedObjectContext *managedObjectContext()
     [request setPredicate:p];
     
     return [self sendFetchRequest:request];
+}
+
+#pragma mark - Poem write requests
+- (HKPoem *)togglePoemFavorite:(HKPoem *)poem
+{
+    NSFetchRequest * request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"HKPoem" inManagedObjectContext:self.poemDataContext]];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"poemId=%@",poem.poemId]];
+    
+    NSError *error = nil;
+    HKPoem *poemEntity = [[self.poemDataContext executeFetchRequest:request error:&error] lastObject];
+    
+    if (!poemEntity) {
+        return nil;
+    }
+    
+    // Switch the poem favorite and save it.
+    poemEntity.isFavorite = !poem.isFavorite;
+    error = nil;
+    if (![self.poemDataContext save:&error]) {
+        return nil;
+    }
+    
+    // Update the favorites array.
+    self.favoritePoems = [self getFavoritePoems];
+    
+    return poemEntity;
 }
 
 @end
