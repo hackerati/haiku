@@ -70,7 +70,16 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         newPoem.edition = edition;
         newPoem.isFavorite = NO;
         newPoem.publishDate = [[poem valueForKey:@"published"] valueForKey:@"$t"];
+        newPoem.poemId = [[poem valueForKey:@"id"] valueForKey:@"$t"];
         
+        // Correct any empty fields.
+        if ([newPoem.title length] == 0) {
+            NSUInteger strlen = [newPoem.content length] - 1;
+            NSUInteger idx = (strlen > 30) ? 30 : strlen;
+            newPoem.title = [newPoem.content substringToIndex:idx];
+        }
+        
+        // Add categories to HKPoem
         NSArray *categories = [poem valueForKey:@"category"];
         
         for (NSJSONSerialization * category in categories)

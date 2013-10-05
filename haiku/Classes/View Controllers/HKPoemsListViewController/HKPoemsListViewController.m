@@ -10,8 +10,6 @@
 
 @interface HKPoemsListViewController ()
 
-@property IBOutlet UITableView *poemTableView;
-
 @end
 
 @implementation HKPoemsListViewController

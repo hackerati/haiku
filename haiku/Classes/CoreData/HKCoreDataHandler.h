@@ -8,14 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class HKPoem;
+
 @interface HKCoreDataHandler : NSObject
 
++ (void)initializeDataStore;
 + (id)sharedManager;
 
 - (NSArray *)getAllPoems;
 - (NSArray *)getAllPoemsByEdition:(NSString *)editionId;
 - (NSArray *)getFavoritePoems;
 - (NSArray *)getFavoritePoemsForEdition:(NSString *)editionId;
+- (HKPoem *)togglePoemFavorite:(HKPoem *)poem;
 
 @property NSArray *allPoems;
 @property NSArray *favoritePoems;
