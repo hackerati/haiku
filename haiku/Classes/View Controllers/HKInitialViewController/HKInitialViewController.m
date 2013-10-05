@@ -52,6 +52,13 @@
     [self initPaginatedView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    // Default to home page on start.
+    [self moveToPage:HKHomePage];
+    [self.pageSelector setSelectedSegmentIndex:HKHomePage];
+}
+
 - (void)initPaginatedView
 {
     NSArray *subviews = @[self.allPoemsViewController.view,
