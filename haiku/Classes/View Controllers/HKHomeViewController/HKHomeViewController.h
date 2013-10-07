@@ -9,9 +9,13 @@
 #import "HKBaseViewController.h"
 
 @class HKPoemWebView;
+@class HKInitialViewController;
 
 @interface HKHomeViewController : HKBaseViewController
 
 @property (nonatomic, strong) HKPoem *currentPoem;
+
+- (id)initWithMainView:(HKInitialViewController *)mainView;
+- (void)loadPoem:(HKPoem *)poem;
 
 @end

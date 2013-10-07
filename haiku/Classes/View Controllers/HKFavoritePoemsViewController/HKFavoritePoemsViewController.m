@@ -7,12 +7,25 @@
 //
 
 #import "HKFavoritePoemsViewController.h"
+#import "HKInitialViewController.h"
 
 @interface HKFavoritePoemsViewController ()
+
+@property HKInitialViewController *mainViewController;
 
 @end
 
 @implementation HKFavoritePoemsViewController
+
+- (id)initWithMainView:(HKInitialViewController *)mainView
+{
+    self = [super initWithNibName:@"HKFavoritePoemsViewController_iPhone" bundle:nil];
+    if (self != nil){
+        // Custom initialization
+        self.mainViewController = mainView;
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,13 +44,18 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.poemTableView reloadData];
+    [self reloadTable];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)reloadTable
+{
+    [self.poemTableView reloadData];
 }
 
 #pragma mark - UITableView Methods
@@ -52,6 +70,12 @@
     cell.textLabel.text = poem.title;
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HKPoem *poem = self.poemData.favoritePoems[indexPath.row];
+    [self.mainViewController didSelectPoem:poem];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

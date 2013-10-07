@@ -8,6 +8,7 @@
 
 #import "HKHomeViewController.h"
 #import "HKAllPoemsViewController.h"
+#import "HKInitialViewController.h"
 #import "SWRevealViewController.h"
 #import "HKPoemWebView.h"
 #import "HKPoem.h"
@@ -22,9 +23,21 @@
 @property IBOutlet UIBarButtonItem *revealAllButtonItem;
 @property IBOutlet UIBarButtonItem *revealFavesButtonItem;
 
+@property HKInitialViewController *mainViewController;
+
 @end
 
 @implementation HKHomeViewController
+
+- (id)initWithMainView:(HKInitialViewController *)mainView
+{
+    self = [super initWithNibName:@"HKHomeViewController_iPhone" bundle:nil];
+    if (self != nil){
+        // Custom initialization
+        self.mainViewController = mainView;
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,11 +53,11 @@
     [super viewDidLoad];
 
     // Set SWRevealViewController Options
-    [self.revealAllButtonItem setTarget:self.revealViewController];
-    [self.revealAllButtonItem setAction:@selector(revealToggle:)];
-    [self.revealFavesButtonItem setTarget:self.revealViewController];
-    [self.revealFavesButtonItem setAction:@selector(rightRevealToggle:)];
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+//    [self.revealAllButtonItem setTarget:self.revealViewController];
+//    [self.revealAllButtonItem setAction:@selector(revealToggle:)];
+//    [self.revealFavesButtonItem setTarget:self.revealViewController];
+//    [self.revealFavesButtonItem setAction:@selector(rightRevealToggle:)];
+//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
 }
 

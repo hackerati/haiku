@@ -20,6 +20,10 @@
 		9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8417E54D1A00D32549 /* iphone_tmpl.html */; };
 		9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */ = {isa = PBXBuildFile; fileRef = 9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */; };
 		9C4CEE9B17E557B100D32549 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */; };
+		9C9A33671800987D00A76468 /* HKInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9A33661800987D00A76468 /* HKInitialViewController.m */; };
+		9C9A33691800996D00A76468 /* HKHomeViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A33681800996D00A76468 /* HKHomeViewController_iPhone.xib */; };
+		9C9A336B18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A336A18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib */; };
+		9C9A336D18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C9A336C18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib */; };
 		9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */; };
 		9CB5CD2D17FBB17A00DD01BC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */; };
 		C7A8D25E17E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
@@ -71,6 +75,11 @@
 		9C4CED8617E54E2D00D32549 /* iphone_tmpl.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = iphone_tmpl.css; path = "Resources/HTML Templates/iphone_tmpl.css"; sourceTree = "<group>"; };
 		9C4CEE9917E557B100D32549 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
 		9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "Third-Party Libraries/SWRevealViewController/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		9C9A33651800987D00A76468 /* HKInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKInitialViewController.h; path = "Classes/View Controllers/HKInitialViewController/HKInitialViewController.h"; sourceTree = "<group>"; };
+		9C9A33661800987D00A76468 /* HKInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKInitialViewController.m; path = "Classes/View Controllers/HKInitialViewController/HKInitialViewController.m"; sourceTree = "<group>"; };
+		9C9A33681800996D00A76468 /* HKHomeViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HKHomeViewController_iPhone.xib; path = "Classes/View Controllers/HKHomeViewController/HKHomeViewController_iPhone.xib"; sourceTree = "<group>"; };
+		9C9A336A18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HKAllPoemsViewController_iPhone.xib; path = "Classes/View Controllers/HKAllPoemsViewController/HKAllPoemsViewController_iPhone.xib"; sourceTree = "<group>"; };
+		9C9A336C18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HKFavoritePoemsViewController_iPhone.xib; path = "Classes/View Controllers/HKFavoritePoemsViewController/HKFavoritePoemsViewController_iPhone.xib"; sourceTree = "<group>"; };
 		9CB5CD2917FBB0F400DD01BC /* HKCoreDataHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HKCoreDataHandler.h; path = Classes/CoreData/HKCoreDataHandler.h; sourceTree = "<group>"; };
 		9CB5CD2A17FBB0F400DD01BC /* HKCoreDataHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HKCoreDataHandler.m; path = Classes/CoreData/HKCoreDataHandler.m; sourceTree = "<group>"; };
 		9CB5CD2C17FBB17A00DD01BC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -149,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				9C4CED6417E53A9E00D32549 /* HKBaseViewController */,
+				9C9A33641800983500A76468 /* HKInitialViewController */,
 				9C4CED6817E53AEA00D32549 /* HKHomeViewController */,
 				9C4CED7017E53C2000D32549 /* HKPoemsListViewController */,
 				9C4CED7217E53C4600D32549 /* HKAllPoemsViewController */,
@@ -171,6 +181,7 @@
 			children = (
 				9C4CED6917E53B1300D32549 /* HKHomeViewController.h */,
 				9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */,
+				9C9A33681800996D00A76468 /* HKHomeViewController_iPhone.xib */,
 			);
 			name = HKHomeViewController;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 			children = (
 				9C4CED7617E53C8200D32549 /* HKFavoritePoemsViewController.h */,
 				9C4CED7717E53C8200D32549 /* HKFavoritePoemsViewController.m */,
+				9C9A336C18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib */,
 			);
 			name = HKFavoritePoemsViewController;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 			children = (
 				9C4CED7917E53C9900D32549 /* HKAllPoemsViewController.h */,
 				9C4CED7A17E53C9900D32549 /* HKAllPoemsViewController.m */,
+				9C9A336A18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib */,
 			);
 			name = HKAllPoemsViewController;
 			sourceTree = "<group>";
@@ -245,6 +258,15 @@
 				9C4CEE9A17E557B100D32549 /* SWRevealViewController.m */,
 			);
 			name = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		9C9A33641800983500A76468 /* HKInitialViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C9A33651800987D00A76468 /* HKInitialViewController.h */,
+				9C9A33661800987D00A76468 /* HKInitialViewController.m */,
+			);
+			name = HKInitialViewController;
 			sourceTree = "<group>";
 		};
 		9CB5CD2817FBB0C800DD01BC /* CoreData */ = {
@@ -421,10 +443,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */,
+				9C9A336B18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib in Resources */,
 				C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */,
+				9C9A336D18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib in Resources */,
 				9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */,
 				9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */,
 				C7A8D27917E1397800D235ED /* Images.xcassets in Resources */,
+				9C9A33691800996D00A76468 /* HKHomeViewController_iPhone.xib in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
 			);
@@ -451,6 +476,7 @@
 				969C535E17FCAA9C00B959A3 /* HKPoem.m in Sources */,
 				9C4CED7B17E53C9900D32549 /* HKAllPoemsViewController.m in Sources */,
 				969C535F17FCAA9C00B959A3 /* HKPoemDataModel.xcdatamodeld in Sources */,
+				9C9A33671800987D00A76468 /* HKInitialViewController.m in Sources */,
 				969C535D17FCAA9C00B959A3 /* HKCategory.m in Sources */,
 				9CB5CD2B17FBB0F400DD01BC /* HKCoreDataHandler.m in Sources */,
 				9C4CED6717E53ACA00D32549 /* HKBaseViewController.m in Sources */,

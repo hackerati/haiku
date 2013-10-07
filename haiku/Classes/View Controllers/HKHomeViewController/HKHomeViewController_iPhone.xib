@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HKHomeViewController">
+            <connections>
+                <outlet property="poemWebView" destination="diT-eV-DBJ" id="e1B-pu-Mt0"/>
+                <outlet property="toggleFaveButtonItem" destination="UiC-PQ-bkf" id="6V2-n4-D3x"/>
+                <outlet property="view" destination="08X-pX-TvK" id="Rrf-Na-zBj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="08X-pX-TvK">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="529"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="diT-eV-DBJ" customClass="HKPoemWebView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="529"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMA-bc-Id6">
+                    <rect key="frame" x="0.0" y="485" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem systemItem="action" id="blG-7n-dhy">
+                            <connections>
+                                <action selector="share:" destination="-1" id="4M5-O2-H3w"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="S67-fz-2G5"/>
+                        <barButtonItem systemItem="refresh" id="ydh-lO-Qbt">
+                            <connections>
+                                <action selector="refreshPoem:" destination="-1" id="IhR-8l-qwU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oDg-rK-12Z"/>
+                        <barButtonItem title="Fave" id="UiC-PQ-bkf">
+                            <connections>
+                                <action selector="toggleFavorite:" destination="-1" id="vPh-Lp-jd1"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

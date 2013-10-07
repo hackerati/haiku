@@ -8,8 +8,12 @@
 
 #import "HKBaseViewController.h"
 
+@class HKInitialViewController;
+
 @interface HKPoemsListViewController : HKBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property IBOutlet UITableView *poemTableView;
+
+- (id)initWithMainView:(HKInitialViewController *)mainView;
 
 @end
