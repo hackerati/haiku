@@ -184,6 +184,7 @@
 				9C4CED6917E53B1300D32549 /* HKHomeViewController.h */,
 				9C4CED6A17E53B1300D32549 /* HKHomeViewController.m */,
 				9C9A33681800996D00A76468 /* HKHomeViewController_iPhone.xib */,
+				C7F4FD9F181605E600C529FE /* HKHomeViewController_iPhone5.xib */,
 			);
 			name = HKHomeViewController;
 			sourceTree = "<group>";
@@ -445,6 +446,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F4FDA0181605E600C529FE /* HKHomeViewController_iPhone5.xib in Resources */,
 				969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */,
 				D47946C31819A2CA00B7641C /* images in Resources */,
 				9C9A336B18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib in Resources */,
