@@ -40,6 +40,7 @@
 		C7A8D28217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
 		C7A8D28A17E1397800D235ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D28817E1397800D235ED /* InfoPlist.strings */; };
 		C7A8D28C17E1397800D235ED /* haikuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D28B17E1397800D235ED /* haikuTests.m */; };
+		D47946C31819A2CA00B7641C /* images in Resources */ = {isa = PBXBuildFile; fileRef = D47946C21819A2CA00B7641C /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		C7A8D28717E1397800D235ED /* haikuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "haikuTests-Info.plist"; sourceTree = "<group>"; };
 		C7A8D28917E1397800D235ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7A8D28B17E1397800D235ED /* haikuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = haikuTests.m; sourceTree = "<group>"; };
+		D47946C21819A2CA00B7641C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +325,7 @@
 		C7A8D26317E1397800D235ED /* haiku */ = {
 			isa = PBXGroup;
 			children = (
+				D47946C21819A2CA00B7641C /* images */,
 				C7A8D26C17E1397800D235ED /* HKAppDelegate.h */,
 				C7A8D26D17E1397800D235ED /* HKAppDelegate.m */,
 				C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */,
@@ -443,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */,
+				D47946C31819A2CA00B7641C /* images in Resources */,
 				9C9A336B18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib in Resources */,
 				C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */,
 				9C9A336D18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib in Resources */,
