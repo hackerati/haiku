@@ -19,6 +19,7 @@
 @dynamic category;
 @dynamic isFavorite;
 @dynamic publishDate;
+@dynamic shareUrl;
 
 
 @end

@@ -97,8 +97,7 @@
 }
 
 - (IBAction) share: (id) sender {
-    NSString* someText = @"SHMARGUM";// self.textView.text;
-    NSArray* dataToShare = @[someText];  // ...or whatever pieces of data you want to share.
+    NSArray* dataToShare = @[self.currentPoem.shareUrl];  // ...or whatever pieces of data you want to share.
     
     UIActivityViewController* activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare

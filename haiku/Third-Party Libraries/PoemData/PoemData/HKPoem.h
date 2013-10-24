@@ -20,5 +20,6 @@
 @property (nonatomic, retain) HKCategory *category;
 @property (nonatomic) BOOL isFavorite;
 @property (nonatomic, retain) NSString *publishDate;
+@property (nonatomic, retain) NSString *shareUrl;
 
 @end

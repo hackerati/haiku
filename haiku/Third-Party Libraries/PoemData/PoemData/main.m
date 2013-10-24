@@ -71,6 +71,53 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         newPoem.isFavorite = NO;
         newPoem.publishDate = [[poem valueForKey:@"published"] valueForKey:@"$t"];
         newPoem.poemId = [[poem valueForKey:@"id"] valueForKey:@"$t"];
+
+        // Add share urls to the poem
+        NSArray *links = [poem valueForKey:@"link"];
+        for (NSDictionary *link in links) {
+            NSString *type = [link valueForKey:@"rel"];
+            if ([type  isEqual: @"alternate"]) {
+                newPoem.shareUrl = [link valueForKey:@"href"];
+                continue;
+            }
+            newPoem.shareUrl = newPoem.title;
+        }
+        
+        //Save images locally and replace source references
+        NSError *error = NULL;
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\"(https?://[0-9]+\.bp\.blogspot\.com/(?:[a-zA-Z0-9\-_]+/)+)([^\"]*)\"" options:NSRegularExpressionCaseInsensitive error:&error];
+        NSArray *matches = [regex matchesInString:newPoem.content
+                                          options:0
+                                            range:NSMakeRange(0, [newPoem.content length])];
+        
+        for (NSTextCheckingResult *match in matches) {
+            NSRange matchRange = [match range];
+            //url path
+            NSRange firstHalfRange = [match rangeAtIndex:1];
+            //filename
+            NSRange secondHalfRange = [match rangeAtIndex:2];
+            
+            if ([[newPoem.content substringWithRange:firstHalfRange] rangeOfString:@"-h"].location == NSNotFound) {
+            
+                //file paths on system
+                NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+                NSString *documentsDirectory = [paths objectAtIndex:0];
+                NSString *filePath = [documentsDirectory stringByAppendingPathComponent:[newPoem.content substringWithRange:secondHalfRange]];
+                
+                //store image if it doesn't exist
+                if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+                    NSString *urlstr = [NSString stringWithFormat:@"%@%@", [newPoem.content substringWithRange:firstHalfRange], [newPoem.content substringWithRange:secondHalfRange]];
+                    NSURL *url = [NSURL URLWithString:urlstr];
+                    NSData *imageData = [NSData dataWithContentsOfURL:url];
+                    [[NSFileManager defaultManager] createFileAtPath:filePath contents:imageData attributes:nil];
+                }
+            }
+        }
+
+        newPoem.content = [regex stringByReplacingMatchesInString:newPoem.content
+                                                                   options:0
+                                                                     range:NSMakeRange(0, [newPoem.content length])
+                                                              withTemplate:@"\"images/$2\""];
         
         // Correct any empty fields.
         if ([newPoem.title length] == 0) {

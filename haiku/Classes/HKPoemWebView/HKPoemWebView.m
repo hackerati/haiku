@@ -49,7 +49,7 @@
 
     [self setPoemHtmlString:html];
 
-    [self loadHTMLString:self.poemHtmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+    [self loadHTMLString:self.poemHtmlString baseURL:[[NSBundle mainBundle] resourceURL]];
 }
 
 @end
