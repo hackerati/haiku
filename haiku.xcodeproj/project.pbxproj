@@ -40,6 +40,7 @@
 		C7A8D28217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
 		C7A8D28A17E1397800D235ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D28817E1397800D235ED /* InfoPlist.strings */; };
 		C7A8D28C17E1397800D235ED /* haikuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D28B17E1397800D235ED /* haikuTests.m */; };
+		C7AB2361181C35BA001DA5B8 /* iconography.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AB2360181C35BA001DA5B8 /* iconography.xcassets */; };
 		D47946C31819A2CA00B7641C /* images in Resources */ = {isa = PBXBuildFile; fileRef = D47946C21819A2CA00B7641C /* images */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +88,7 @@
 		9CB5CD3B17FBB39D00DD01BC /* jp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jp.json; sourceTree = "<group>"; };
 		9CB5CD3C17FBB39D00DD01BC /* sp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sp.json; sourceTree = "<group>"; };
 		9CB5CD3D17FBB39D00DD01BC /* us.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = us.json; sourceTree = "<group>"; };
-		C7A8D25A17E1397800D235ED /* haiku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = haiku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A8D25A17E1397800D235ED /* Matsushita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matsushita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D25D17E1397800D235ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7A8D25F17E1397800D235ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C7A8D26117E1397800D235ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -105,6 +106,7 @@
 		C7A8D28717E1397800D235ED /* haikuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "haikuTests-Info.plist"; sourceTree = "<group>"; };
 		C7A8D28917E1397800D235ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7A8D28B17E1397800D235ED /* haikuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = haikuTests.m; sourceTree = "<group>"; };
+		C7AB2360181C35BA001DA5B8 /* iconography.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = iconography.xcassets; path = ../iconography.xcassets; sourceTree = "<group>"; };
 		D47946C21819A2CA00B7641C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -304,7 +306,7 @@
 		C7A8D25B17E1397800D235ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7A8D25A17E1397800D235ED /* haiku.app */,
+				C7A8D25A17E1397800D235ED /* Matsushita.app */,
 				C7A8D27E17E1397800D235ED /* haikuTests.xctest */,
 			);
 			name = Products;
@@ -330,6 +332,7 @@
 				C7A8D26D17E1397800D235ED /* HKAppDelegate.m */,
 				C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */,
 				C7A8D27217E1397800D235ED /* Main_iPad.storyboard */,
+				C7AB2360181C35BA001DA5B8 /* iconography.xcassets */,
 				C7A8D27817E1397800D235ED /* Images.xcassets */,
 				9C4CED6217E53A8500D32549 /* Classes */,
 				9C4CED8217E54A5F00D32549 /* Resources */,
@@ -385,7 +388,7 @@
 			);
 			name = haiku;
 			productName = haiku;
-			productReference = C7A8D25A17E1397800D235ED /* haiku.app */;
+			productReference = C7A8D25A17E1397800D235ED /* Matsushita.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C7A8D27D17E1397800D235ED /* haikuTests */ = {
@@ -456,6 +459,7 @@
 				9C9A33691800996D00A76468 /* HKHomeViewController_iPhone.xib in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
+				C7AB2361181C35BA001DA5B8 /* iconography.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +627,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "haiku/haiku-Prefix.pch";
 				INFOPLIST_FILE = "haiku/haiku-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Matsushita;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -636,7 +641,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "haiku/haiku-Prefix.pch";
 				INFOPLIST_FILE = "haiku/haiku-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Matsushita;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -67,7 +67,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"poemCell"];
     }
     
+    UIFont *cellFont = [ UIFont fontWithName: @"Verdana" size: 14.0 ];
+    
     cell.textLabel.text = poem.title;
+    cell.textLabel.font = cellFont;
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;
 }

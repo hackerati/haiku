@@ -52,14 +52,16 @@
 #pragma mark - UITableView Methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HKPoem *poem = self.poemData.allPoems[indexPath.row];
-
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"poemCell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"poemCell"];
     }
 
+    UIFont *cellFont = [ UIFont fontWithName: @"Verdana" size: 14.0 ];
+    
     cell.textLabel.text = poem.title;
-    cell.detailTextLabel.text = poem.publishDate;
+    cell.textLabel.font = cellFont;
     return cell;
 }
 
