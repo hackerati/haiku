@@ -1,5 +1,5 @@
 .poem-title {
-  color: #666;
+  color: #3d3d3d;
   font-size: 23pt;
   text-align: center;
   margin-top: 20%;
@@ -7,9 +7,9 @@
 }
 
 .poem-text {
-  color: #666;
-  font-size: 18px;
-  font: 18px/100% Helvetica;
+  color: #3d3d3d;
+  font-size: 16px !important;
+  font: 18px/100% Verdana;
   text-align: center;
   margin-bottom: 60px;
 }

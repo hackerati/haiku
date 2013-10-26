@@ -57,8 +57,11 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"poemCell"];
     }
+
+    UIFont *cellFont = [ UIFont fontWithName: @"Verdana" size: 14.0 ];
     
     cell.textLabel.text = poem.title;
+    cell.textLabel.font = cellFont;
     return cell;
 }
 
