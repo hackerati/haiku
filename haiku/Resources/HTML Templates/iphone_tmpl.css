@@ -1,23 +1,33 @@
+.container {
+    width: 100%;
+    height: auto;
+}
+
 .poem-title {
   color: #3d3d3d;
-  font-size: 23pt;
+  font: 33px/100% Verdana;
   text-align: center;
-  margin-top: 20%;
-  margin-bottom: 12px;
+  margin-top: 60%;
+  margin-bottom: 100%;
 }
 
 .poem-text {
   color: #3d3d3d;
-  font-size: 16px !important;
-  font: 18px/100% Verdana;
+  font-size: 18px !important;
+  font: 18px/120% Verdana;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20%;
 }
 
 img {
     max-width: 100%;
 }
 
-dimensions {
-    display: none;
+img span{
+    display; none !important;
+}
+
+a {
+    pointer-events: none;
+    cursor: default;
 }

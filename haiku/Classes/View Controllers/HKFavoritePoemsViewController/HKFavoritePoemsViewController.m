@@ -71,6 +71,7 @@
     
     cell.textLabel.text = poem.title;
     cell.textLabel.font = cellFont;
+    cell.textLabel.tintColor = [UIColor darkGrayColor];
     cell.textLabel.textAlignment = NSTextAlignmentRight;
     return cell;
 }

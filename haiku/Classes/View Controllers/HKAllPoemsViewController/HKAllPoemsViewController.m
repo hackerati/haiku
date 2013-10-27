@@ -61,6 +61,7 @@
     UIFont *cellFont = [ UIFont fontWithName: @"Verdana" size: 14.0 ];
     
     cell.textLabel.text = poem.title;
+    cell.textLabel.tintColor = [UIColor darkGrayColor];
     cell.textLabel.font = cellFont;
     return cell;
 }

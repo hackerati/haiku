@@ -46,7 +46,7 @@
 
     html = [html stringByReplacingOccurrencesOfString:@"{{title}}" withString:poem.title];
     html = [html stringByReplacingOccurrencesOfString:@"{{content}}" withString:poem.content];
-
+    
     [self setPoemHtmlString:html];
 
     [self loadHTMLString:self.poemHtmlString baseURL:[[NSBundle mainBundle] resourceURL]];

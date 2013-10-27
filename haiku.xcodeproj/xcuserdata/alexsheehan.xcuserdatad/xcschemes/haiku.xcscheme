@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7A8D25917E1397800D235ED"
-               BuildableName = "haiku.app"
+               BuildableName = "Matsushita.app"
                BlueprintName = "haiku"
                ReferencedContainer = "container:haiku.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7A8D25917E1397800D235ED"
-            BuildableName = "haiku.app"
+            BuildableName = "Matsushita.app"
             BlueprintName = "haiku"
             ReferencedContainer = "container:haiku.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7A8D25917E1397800D235ED"
-            BuildableName = "haiku.app"
+            BuildableName = "Matsushita.app"
             BlueprintName = "haiku"
             ReferencedContainer = "container:haiku.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7A8D25917E1397800D235ED"
-            BuildableName = "haiku.app"
+            BuildableName = "Matsushita.app"
             BlueprintName = "haiku"
             ReferencedContainer = "container:haiku.xcodeproj">
          </BuildableReference>

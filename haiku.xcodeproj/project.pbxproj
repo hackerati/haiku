@@ -33,14 +33,12 @@
 		C7A8D26A17E1397800D235ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D26917E1397800D235ED /* main.m */; };
 		C7A8D26E17E1397800D235ED /* HKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D26D17E1397800D235ED /* HKAppDelegate.m */; };
 		C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */; };
-		C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D27217E1397800D235ED /* Main_iPad.storyboard */; };
 		C7A8D27917E1397800D235ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D27817E1397800D235ED /* Images.xcassets */; };
 		C7A8D28017E1397800D235ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D27F17E1397800D235ED /* XCTest.framework */; };
 		C7A8D28117E1397800D235ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D25D17E1397800D235ED /* Foundation.framework */; };
 		C7A8D28217E1397800D235ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A8D26117E1397800D235ED /* UIKit.framework */; };
 		C7A8D28A17E1397800D235ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7A8D28817E1397800D235ED /* InfoPlist.strings */; };
 		C7A8D28C17E1397800D235ED /* haikuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A8D28B17E1397800D235ED /* haikuTests.m */; };
-		C7AB2361181C35BA001DA5B8 /* iconography.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7AB2360181C35BA001DA5B8 /* iconography.xcassets */; };
 		D47946C31819A2CA00B7641C /* images in Resources */ = {isa = PBXBuildFile; fileRef = D47946C21819A2CA00B7641C /* images */; };
 /* End PBXBuildFile section */
 
@@ -99,14 +97,12 @@
 		C7A8D26C17E1397800D235ED /* HKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKAppDelegate.h; sourceTree = "<group>"; };
 		C7A8D26D17E1397800D235ED /* HKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKAppDelegate.m; sourceTree = "<group>"; };
 		C7A8D27017E1397800D235ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		C7A8D27317E1397800D235ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C7A8D27817E1397800D235ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C7A8D27E17E1397800D235ED /* haikuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = haikuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8D27F17E1397800D235ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C7A8D28717E1397800D235ED /* haikuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "haikuTests-Info.plist"; sourceTree = "<group>"; };
 		C7A8D28917E1397800D235ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7A8D28B17E1397800D235ED /* haikuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = haikuTests.m; sourceTree = "<group>"; };
-		C7AB2360181C35BA001DA5B8 /* iconography.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = iconography.xcassets; path = ../iconography.xcassets; sourceTree = "<group>"; };
 		D47946C21819A2CA00B7641C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -331,8 +327,6 @@
 				C7A8D26C17E1397800D235ED /* HKAppDelegate.h */,
 				C7A8D26D17E1397800D235ED /* HKAppDelegate.m */,
 				C7A8D26F17E1397800D235ED /* Main_iPhone.storyboard */,
-				C7A8D27217E1397800D235ED /* Main_iPad.storyboard */,
-				C7AB2360181C35BA001DA5B8 /* iconography.xcassets */,
 				C7A8D27817E1397800D235ED /* Images.xcassets */,
 				9C4CED6217E53A8500D32549 /* Classes */,
 				9C4CED8217E54A5F00D32549 /* Resources */,
@@ -419,6 +413,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "The Hackerati";
 				TargetAttributes = {
+					C7A8D25917E1397800D235ED = {
+						DevelopmentTeam = HN3U7E4M59;
+					};
 					C7A8D27D17E1397800D235ED = {
 						TestTargetID = C7A8D25917E1397800D235ED;
 					};
@@ -451,7 +448,6 @@
 				969C536B17FCB0F100B959A3 /* PoemData.sqlite in Resources */,
 				D47946C31819A2CA00B7641C /* images in Resources */,
 				9C9A336B18009A8A00A76468 /* HKAllPoemsViewController_iPhone.xib in Resources */,
-				C7A8D27417E1397800D235ED /* Main_iPad.storyboard in Resources */,
 				9C9A336D18009AFB00A76468 /* HKFavoritePoemsViewController_iPhone.xib in Resources */,
 				9C4CED8517E54D1A00D32549 /* iphone_tmpl.html in Resources */,
 				9C4CED8717E54E2D00D32549 /* iphone_tmpl.css in Resources */,
@@ -459,7 +455,6 @@
 				9C9A33691800996D00A76468 /* HKHomeViewController_iPhone.xib in Resources */,
 				C7A8D27117E1397800D235ED /* Main_iPhone.storyboard in Resources */,
 				C7A8D26817E1397800D235ED /* InfoPlist.strings in Resources */,
-				C7AB2361181C35BA001DA5B8 /* iconography.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,14 +523,6 @@
 				C7A8D27017E1397800D235ED /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C7A8D27217E1397800D235ED /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7A8D27317E1397800D235ED /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C7A8D28817E1397800D235ED /* InfoPlist.strings */ = {
@@ -624,10 +611,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "haiku/haiku-Prefix.pch";
 				INFOPLIST_FILE = "haiku/haiku-Info.plist";
 				PRODUCT_NAME = Matsushita;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -638,10 +628,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "haiku/haiku-Prefix.pch";
 				INFOPLIST_FILE = "haiku/haiku-Info.plist";
 				PRODUCT_NAME = Matsushita;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

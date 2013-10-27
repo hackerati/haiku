@@ -9,21 +9,21 @@
             <objects>
                 <viewController id="dcH-J9-cxz" customClass="HKInitialViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mae-Me-yVW"/>
-                        <viewControllerLayoutGuide type="bottom" id="LW1-Sa-dVW"/>
+                        <viewControllerLayoutGuide type="top" id="K7S-AD-SH0"/>
+                        <viewControllerLayoutGuide type="bottom" id="vuU-xY-5sd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SqG-7S-tc6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-hJ-qcI">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-hJ-qcI">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="dcH-J9-cxz" id="Xxr-bp-RFf"/>
                                 </connections>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LT-Cm-y0b">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LT-Cm-y0b">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
@@ -46,8 +46,19 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0LT-Cm-y0b" firstAttribute="top" secondItem="WLb-hJ-qcI" secondAttribute="top" id="0cF-f7-gIg"/>
+                            <constraint firstItem="WLb-hJ-qcI" firstAttribute="leading" secondItem="0LT-Cm-y0b" secondAttribute="leading" id="14V-YH-Tzx"/>
+                            <constraint firstItem="vuU-xY-5sd" firstAttribute="top" secondItem="WLb-hJ-qcI" secondAttribute="bottom" id="8Gn-97-kEf"/>
+                            <constraint firstItem="WLb-hJ-qcI" firstAttribute="top" secondItem="SqG-7S-tc6" secondAttribute="top" constant="20" symbolic="YES" id="AmC-V1-qiL"/>
+                            <constraint firstAttribute="trailing" secondItem="0LT-Cm-y0b" secondAttribute="trailing" id="XmH-T4-moG"/>
+                            <constraint firstAttribute="bottom" secondItem="WLb-hJ-qcI" secondAttribute="bottom" id="ntd-Cq-BZu"/>
+                            <constraint firstItem="WLb-hJ-qcI" firstAttribute="leading" secondItem="SqG-7S-tc6" secondAttribute="leading" id="ogo-w8-WXE"/>
+                            <constraint firstItem="WLb-hJ-qcI" firstAttribute="trailing" secondItem="0LT-Cm-y0b" secondAttribute="trailing" id="xvW-b6-Jkv"/>
+                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="pageSelector" destination="B9G-tT-q0s" id="nnR-QM-wYR"/>
                         <outlet property="paginatedView" destination="WLb-hJ-qcI" id="NUB-U0-XJq"/>
@@ -58,6 +69,7 @@
             <point key="canvasLocation" x="441" y="253"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
