@@ -414,7 +414,7 @@
 				ORGANIZATIONNAME = "The Hackerati";
 				TargetAttributes = {
 					C7A8D25917E1397800D235ED = {
-						DevelopmentTeam = HN3U7E4M59;
+						DevelopmentTeam = 63LVAGD552;
 					};
 					C7A8D27D17E1397800D235ED = {
 						TestTargetID = C7A8D25917E1397800D235ED;
