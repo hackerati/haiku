@@ -102,7 +102,7 @@
     UIActivityViewController* activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare
                                       applicationActivities:nil];
-    [self presentViewController:activityViewController animated:YES completion:^{}];
+    [self.mainViewController presentViewController:activityViewController animated:YES completion:^{}];
 }
 
 - (IBAction)toggleFavorite:(id)sender
