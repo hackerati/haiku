@@ -17,11 +17,13 @@
 @interface HKHomeViewController ()
 {
     IBOutlet UIBarButtonItem *toggleFaveButtonItem;
+    CGPoint initialTitleOrigin;
 }
 
 @property IBOutlet HKPoemWebView *poemWebView;
 @property IBOutlet UIBarButtonItem *revealAllButtonItem;
 @property IBOutlet UIBarButtonItem *revealFavesButtonItem;
+@property IBOutlet UILabel *titleLabel;
 
 @property HKInitialViewController *mainViewController;
 
@@ -58,7 +60,10 @@
 //    [self.revealFavesButtonItem setTarget:self.revealViewController];
 //    [self.revealFavesButtonItem setAction:@selector(rightRevealToggle:)];
 //    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
+    [self.poemWebView setBackgroundColor:[UIColor clearColor]];
+    [self.poemWebView setOpaque:NO];
+    [self.poemWebView.scrollView setDelegate:self];
+    initialTitleOrigin = self.titleLabel.frame.origin;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -81,6 +86,7 @@
 - (void)loadPoem:(HKPoem *)poem
 {
     self.currentPoem = poem;
+    self.titleLabel.text = self.currentPoem.title;
     // Set UI based on the current poem's properties
     if (self.currentPoem.isFavorite)
         [toggleFaveButtonItem setTitle:@"Unfave"];
@@ -110,6 +116,13 @@
     HKPoem *updatedPoem = [self.poemData togglePoemFavorite:self.currentPoem];
     if (updatedPoem != nil)
         [self loadPoem:updatedPoem];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGRect titleFrame = self.titleLabel.frame;
+    titleFrame.origin.y = -(scrollView.contentOffset.y / 3) + initialTitleOrigin.y;
+    self.titleLabel.frame = titleFrame;
 }
 
 @end

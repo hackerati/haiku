@@ -1,14 +1,5 @@
-.poem-title {
-    display: inline-block;
-    position: fixed;
-    top: 35%;
-    left: 5px;
-    right: 5px;
-    color: #3d3d3d;
-    font: 45px/100% Verdana;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 100%;
+body {
+    background-color: transparent;
 }
 
 .poem-text {
@@ -22,14 +13,14 @@
     padding-top: 20px;
     margin-top: 170%;
     padding-bottom: 55%;
-    background-color: white;
     box-shadow: 0px -40px 25px white;
     -webkit-transform: translate3d(0,0,1px);
     transform: translate3d(0,0,1px);
+    background-color: white;
 }
 
 img {
-    max-width: 100%;
+    max-width: 95%;
     border: 2px solid #3d3d3d;
 }
 
