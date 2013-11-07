@@ -11,7 +11,7 @@
 @class HKPoemWebView;
 @class HKInitialViewController;
 
-@interface HKHomeViewController : HKBaseViewController
+@interface HKHomeViewController : HKBaseViewController <UIScrollViewDelegate>
 
 @property (nonatomic, strong) HKPoem *currentPoem;
 

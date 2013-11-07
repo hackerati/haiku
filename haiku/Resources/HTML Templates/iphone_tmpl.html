@@ -1,20 +1,9 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="iphone_tmpl.css" media="screen" />
-    
-    <script type="text/javascript">
-        function onLoad() {
-            window.onscroll = function() {
-                var speed = 8.0;
-                document.getElementById("#poem-title").style.top = (-window.pageYOffset / speed) + "px";
-            }
-        }
-    </script>
+
 </head>
-<body onload="onLoad()">
-    <div id="poem-title" class="poem-title">
-        {{title}}
-    </div>
+<body>
     <div id="poem-text" class="poem-text">
         {{content}}
     </div>

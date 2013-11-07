@@ -44,7 +44,6 @@
     NSString *html = [NSString stringWithContentsOfFile:htmlTemplate
                                                encoding:NSUTF8StringEncoding error:nil];
 
-    html = [html stringByReplacingOccurrencesOfString:@"{{title}}" withString:poem.title];
     html = [html stringByReplacingOccurrencesOfString:@"{{content}}" withString:poem.content];
     
     [self setPoemHtmlString:html];
