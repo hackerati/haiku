@@ -16,7 +16,8 @@
 
 @interface HKHomeViewController ()
 {
-    IBOutlet UIBarButtonItem *toggleFaveButtonItem;
+    UIButton *toggleFaveButtonItem;
+    IBOutlet UIToolbar *toolbar;
     CGPoint initialTitleOrigin;
 }
 
@@ -64,6 +65,15 @@
     [self.poemWebView setOpaque:NO];
     [self.poemWebView.scrollView setDelegate:self];
     initialTitleOrigin = self.titleLabel.frame.origin;
+    
+    toggleFaveButtonItem =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [toggleFaveButtonItem setImage:[UIImage imageNamed:@"images/star-inactive.png"] forState:UIControlStateNormal];
+    [toggleFaveButtonItem setImage:[UIImage imageNamed:@"images/star-active.png"] forState:UIControlStateSelected];
+    [toggleFaveButtonItem addTarget:self action:@selector(toggleFavorite:) forControlEvents:UIControlEventTouchUpInside];
+    [toggleFaveButtonItem setFrame:CGRectMake(0, 0, 28, 28)];
+    NSMutableArray *newItems = [toolbar.items mutableCopy];
+    [newItems addObject:[[UIBarButtonItem alloc] initWithCustomView:toggleFaveButtonItem]];
+    toolbar.items = newItems;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -88,10 +98,11 @@
     self.currentPoem = poem;
     self.titleLabel.text = self.currentPoem.title;
     // Set UI based on the current poem's properties
-    if (self.currentPoem.isFavorite)
-        [toggleFaveButtonItem setTitle:@"Unfave"];
-    else
-        [toggleFaveButtonItem setTitle:@"Fave"];
+    if (self.currentPoem.isFavorite) {
+        [toggleFaveButtonItem setSelected:YES];
+    } else {
+        [toggleFaveButtonItem setSelected:NO];
+    }
     
     // Load the poem
     [self.poemWebView loadPoem:self.currentPoem];

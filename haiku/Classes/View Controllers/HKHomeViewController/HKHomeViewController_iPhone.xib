@@ -8,7 +8,7 @@
             <connections>
                 <outlet property="poemWebView" destination="diT-eV-DBJ" id="e1B-pu-Mt0"/>
                 <outlet property="titleLabel" destination="XHX-hF-lD8" id="P65-pO-hpZ"/>
-                <outlet property="toggleFaveButtonItem" destination="UiC-PQ-bkf" id="6V2-n4-D3x"/>
+                <outlet property="toolbar" destination="yMA-bc-Id6" id="TPT-er-1Dd"/>
                 <outlet property="view" destination="08X-pX-TvK" id="Rrf-Na-zBj"/>
             </connections>
         </placeholder>
@@ -38,18 +38,13 @@
                                 <action selector="share:" destination="-1" id="4M5-O2-H3w"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="S67-fz-2G5"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="S67-fz-2G5" userLabel="Bar Button Item - Flexible Space"/>
                         <barButtonItem systemItem="refresh" id="ydh-lO-Qbt">
                             <connections>
                                 <action selector="refreshPoem:" destination="-1" id="IhR-8l-qwU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oDg-rK-12Z"/>
-                        <barButtonItem title="Fave" id="UiC-PQ-bkf">
-                            <connections>
-                                <action selector="toggleFavorite:" destination="-1" id="vPh-Lp-jd1"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="eP4-l9-LvS" userLabel="Bar Button Item - Flexible Space"/>
                     </items>
                 </toolbar>
             </subviews>
