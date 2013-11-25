@@ -121,9 +121,9 @@ int *addPoemDataToContext(NSJSONSerialization *poemData, NSManagedObjectContext 
         
         // Correct any empty fields.
         if ([newPoem.title length] == 0) {
-            NSUInteger strlen = [newPoem.content length] - 1;
-            NSUInteger idx = (strlen > 30) ? 30 : strlen;
-            newPoem.title = [newPoem.content substringToIndex:idx];
+            //NSUInteger strlen = [newPoem.content length] - 1;
+            //NSUInteger idx = (strlen > 30) ? 30 : strlen;
+            newPoem.title = @"Untitled";//[newPoem.content substringToIndex:idx];
         }
         
         // Add categories to HKPoem
