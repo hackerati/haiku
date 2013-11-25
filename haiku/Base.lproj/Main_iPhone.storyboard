@@ -35,7 +35,7 @@
                                             <segments>
                                                 <segment title="All"/>
                                                 <segment title="Current Poem"/>
-                                                <segment title="Favorites"/>
+                                                <segment title="Bookmarks"/>
                                             </segments>
                                             <connections>
                                                 <action selector="pageSelectorChanged:" destination="dcH-J9-cxz" eventType="valueChanged" id="Xa5-dI-dMA"/>
